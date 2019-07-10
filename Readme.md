@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Антон Леонидович](https://up.htmlacademy.ru/adaptive/17/user/948947).
-* Наставник: `Неизвестно`.
+* Наставник: [Оксана Вайнруб](https://htmlacademy.ru/profile/id166797).
 
 ---
 
