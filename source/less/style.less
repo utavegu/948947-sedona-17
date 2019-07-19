@@ -1,0 +1,98 @@
+@font-face {
+  font-family: PT Sans;
+  src: url("../fonts/web/ptsans.woff");
+  src: url("../fonts/web/ptsans.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PT Sans;
+  src: url("../fonts/web/ptsansbold.woff");
+  src: url("../fonts/web/ptsansbold.woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@import "variables.less";
+
+@import "mixins.less";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+/*  font-family: "PT Sans", "Arial", sans-serif;*/
+  font-family: "Courier New", Courier, monospace; /*ЭТО НУЖНО ДЛЯ САМОПРОВЕРКИ!*/
+  margin: 0;
+  padding: 0;
+  }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.mobile-wrapper {
+  width: 320px;
+  margin: auto;
+}
+
+/*.tablet-wrapper {
+  width: 320px;
+  margin: auto;
+}
+
+.desktop-wrapper {
+  width: 320px;
+  margin: auto;
+}*/
+
+.button {
+  display: inline-block;
+  padding: 18px 45px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: @maincolor;
+  border: none;
+  min-width: 280px;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+@import "blocks/main-header.less";
+@import "blocks/main-footer.less";
+@import "blocks/index/advantages.less";
+@import "blocks/index/hotel-search.less";
+@import "blocks/photo/photo-and-video.less";
+@import "blocks/form/feedback.less";

@@ -1,0 +1,120 @@
+.main-navigation {
+  position: relative;
+}
+
+.site-list {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__item {
+  background-color: @maincolor;
+  border-bottom: #678fa8 1px solid;
+  border-top: #9ac2db 1px solid;
+}
+
+.site-list__item:first-child {
+  border-top: none;
+/*  position: relative;*/
+}
+
+.site-list__item:first-child::before {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  right: 20px;
+
+  width: 22.199px;
+  height: 22.199px;
+
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+}
+
+.site-list__item:last-child {
+  border-bottom: none;
+  margin-bottom: 56px;
+}
+
+.site-list__link {
+  .contents;
+  .heading;
+  color: #ffffff;
+  display: block;
+  padding: 20px 0 20px;
+}
+
+.main-header__logo-link {
+  position: absolute;
+  left: 50%;
+  bottom: -89px;
+  width: 102px;
+  margin-left: -51px;
+  /*Вот эти рассчёты тоже надо бы автоматизировать*/
+  z-index: 1;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  right: 20px;
+  bottom: -37px;
+  cursor: pointer;
+  width: 22.928px;
+  height: 22.928px;
+  background-color: white;
+  border: none;
+}
+
+.main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22.928px;
+  height: 22.928px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.main-header__poster {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 320px;
+  height: 390px;
+  position: relative;
+}
+
+.main-header__poster-miny {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 70%;
+  width: 320px;
+  height: 158px;
+  position: relative;
+}
+
+.main-header__poster-text {
+  position: absolute;
+  width: 281px;
+  left: 50%;
+  margin-left: -140px;
+  top: 90px;
+}
+
+.main-header__poster-text-miny {
+  position: absolute;
+  width: 230px;
+  left: 50%;
+  margin-left: -115px;
+  top: 52px;
+}

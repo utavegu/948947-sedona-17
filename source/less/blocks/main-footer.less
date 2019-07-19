@@ -1,0 +1,47 @@
+.hashtag {
+  .contents;
+  .heading;
+  font-size: 21px;
+}
+
+
+.social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social__item {
+  background-color: @maincolor;
+  width: 47px;
+  height: 48px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+/*Вот эта вся штука тоже походит на примесь*/
+.social__link::after {
+  content: "";
+
+  width: 17.5px;
+  height: 14.663px;
+
+/*А вот это надо как-то через переменные и математические функции автоматизировать*/
+  position: absolute;
+  top: 50%-17.5px;
+  left: 50%-14.663px;
+
+  background-image: url("../img/icon-twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.copyright__text {
+  .contents;
+  font-weight: normal;
+}
+
+
