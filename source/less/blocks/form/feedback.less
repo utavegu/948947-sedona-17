@@ -1,10 +1,17 @@
+.feedback {
+  margin-top: 40px;
+}
+
 .feedback__title {
   .contents;
   .heading;
+  margin-bottom: 32px;
 }
 
 .feedback__description {
   .contents;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 
 .feedback__section {
@@ -28,4 +35,238 @@
   background-color: #f2f2f2;
   color: #242424;
 }
-/*Вспомни как плэйсхолдеру текст задавать цвет, там как-то по хитрому, через преффиксы вроде*/
+
+.feedback__item input:-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input:-ms-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input:-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.about__item {
+  margin: 0;
+  margin-bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__label {
+  padding-left: 6px;
+}
+
+.about__input {
+  margin-right: 5px;
+  height: 58px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 22px;
+  &[name="forename"] {
+    width: 230px;
+  }
+  &[name="surname"] {
+    width: 192px;
+  }
+  &[name="patronymic"] {
+    width: 194px;
+  }
+}
+
+
+.contacts h3 {
+  margin-bottom: 25px;
+}
+
+.contacts__label {
+  margin-left: 27px;
+}
+
+.contacts__input {
+  margin-top: 13px;
+  margin-left: 7px;
+  width: 280px;
+  height: 58px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 22px;
+}
+
+.impression {
+  margin-bottom: -5px;
+}
+
+.impression h3 {
+  margin-top: 14px;
+  margin-bottom: 44px;
+}
+
+.impression__item {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.impression__input:checked + .impression__radio {
+  background-image: url("../img/icon-point.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.impression__radio {
+  position: absolute;
+  left: 6px;
+  top: -12px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.impression__name {
+  padding-left: 86px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.sights {
+  margin-bottom: -25px;
+}
+
+.sights h3 {
+  line-height: 1.44em;
+  margin-top: 14px;
+  margin-bottom: 37px;
+}
+
+.sights__item {
+  position: relative;
+  padding-bottom: 45px;
+}
+
+.sights__input:checked + .sights__checkbox {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sights__checkbox {
+  position: absolute;
+  left: 5px;
+  top: -15px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.sights__name {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 85px;
+  line-height: 18px;
+}
+
+.emotion {
+  margin-bottom: 39px;
+}
+
+.emotion__textarea {
+  width: 279px;
+  height: 160px;
+  margin-left: 5px;
+
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 22px;
+  padding-top: 17px;
+  background-color: #f2f2f2;
+  line-height: 1.44em;
+  resize: none;
+  color: #000000;
+}
+
+
+.emotion textarea:-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-ms-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+
+.feedback__button {
+  width: 280px;
+  margin-left: 20px;
+  margin-bottom: 52px;
+}

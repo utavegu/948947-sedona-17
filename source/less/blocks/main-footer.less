@@ -2,8 +2,13 @@
   .contents;
   .heading;
   font-size: 21px;
+  margin-bottom: 37px;
 }
 
+.main-footer__social {
+  text-align: center;
+  margin-bottom: 36px;
+}
 
 .social__list {
   list-style: none;
@@ -15,33 +20,59 @@
   background-color: @maincolor;
   width: 47px;
   height: 48px;
-  margin-right: 6px;
+  margin-right: 1px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
 }
+/*Что-то у меня расстояние между контейнерами какое-то неодинаковое...*/
 
-/*Вот эта вся штука тоже походит на примесь*/
-.social__link::after {
-  content: "";
-
-  width: 17.5px;
-  height: 14.663px;
-
-/*А вот это надо как-то через переменные и математические функции автоматизировать*/
-  position: absolute;
-  top: 50%-17.5px;
-  left: 50%-14.663px;
-
-  background-image: url("../img/icon-twitter.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+.social__link {
+  display: block;
+  padding: 23px;
+  &::after {
+    .pseudo-element;
+  }
+  &--twitter::after {
+    width: 17.5px;
+    height: 14.663px;
+    top: 50%-17.5px;
+    left: 50%-14.663px;
+    background-image: url("../img/icon-twitter.svg");
+  }
+  &--facebook::after {
+    width: 8.672px;
+    height: 18.944px;
+    top: 50%-18.944px;
+    left: 50%-8.672px;
+    background-image: url("../img/icon-facebook.svg");
+  }
+  &--youtube::after {
+    width: 19.979px;
+    height: 14.015px;
+    top: 50%-14.015px;
+    left: 50%-19.979px;
+    background-image: url("../img/icon-youtube.svg");
+  }
 }
 
+.main-footer__copyright {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .copyright__text {
   .contents;
   font-weight: normal;
+  color: #000000;
 }
 
-
+.copyright__link {
+  background-image: url("../img/htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  vertical-align: middle;
+}

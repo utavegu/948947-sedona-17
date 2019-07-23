@@ -1,32 +1,59 @@
 .advantages__header {
   .contents;
   .heading;
+  width: 260px;
+  margin: auto;
+  margin-bottom: 28px;
+  line-height: 26px;
 }
 
 .advantages__preview {
   .contents;
+  width: 260px;
+  line-height: 26px;
+  margin: auto;
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 4px;
 }
 
 .advantages__item {
   background-color: #eeeeee;
-}
-
-.advantages__item--opened {
-  color: #ffffff;
-  background-color: @maincolor;
+  &:first-child {
+    position: relative;
+    padding-top: 80px;
+  }
+  &:first-child::before {
+    .pseudo-element;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/bg-triangle.svg");
+  }
+  &:nth-child(2) {
+    margin-top: 12px;
+    padding-top: 43px;
+  }
+  &--opened {
+    color: #ffffff;
+    background-color: @maincolor;
+  }
 }
 
 .advantages__title {
   .contents;
   .heading;
   color: inherit;
-  font-size: 21px;
+  margin: 0;
+  margin-bottom: 15px;
+  &--not-opened {
+    padding-top: 28px;
+  }
 }
 
 .advantages__number {
@@ -37,19 +64,78 @@
 .advantages__description {
   .contents;
   color: inherit;
+  line-height: 21px;
+  margin: 0;
+  padding: 16px 20px 41px;
+  &:last-child {
+    width: 290px;
+    margin: auto;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 29px;
+  }
+}
+/*Пока не соображу каким селектором попасть в последний дескрипшин*/
+
+.advantages__picture {
+  display: block;
+}
+
+.features {
+  background-color: #ffffff;
+  padding-top: 35px;
 }
 
 .features__item {
-  background-color: #ffffff;
+  padding-left: 70px;
+  position: relative;
+  &::before {
+    .pseudo-element;
+    left: 22px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    outline: 0.1px blue dotted;
+  }
+  &--housing::before {
+    background-image: url("../img/icon-house.svg");
+    width: 37px;
+    height: 36px;
+  /*  width: 74.695px;
+    height: 72.346px;*/
+  }
+  &--souvenirs::before {
+    background-image: url("../img/icon-gift.svg");
+    width: 32px;
+    height: 38px;
+  /*  width: 63px;
+    height: 75.084px;*/
+  }
+  &--food::before {
+    background-image: url("../img/icon-burger.svg");
+    width: 40px;
+    height: 35px;
+  /*  width: 76.166px;
+    height: 68.959px;*/
+  }
 }
+/*НЕ ПОНЯЛ, ПОЧЕМУ ОНИ НЕ ПОДГОНЯЮТСЯ ПОД РАЗМЕРЫ КОНТЕЙНЕРА*/
 
 .features__title {
   .contents;
   .heading;
   text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  line-height: 26px;
 }
 
 .features__description {
   .contents;
   text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 210px;
+  line-height: 21px;
+  padding-bottom: 26px;
 }

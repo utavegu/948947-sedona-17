@@ -1,3 +1,7 @@
+.photo-and-video {
+  margin-top: 43px;
+}
+
 .photo-and-video__title {
   .contents;
   .heading;
@@ -5,10 +9,18 @@
 
 .photo-and-video__description {
   .contents;
+  padding: 14px 25px;
+  line-height: 24px;
 }
 
 .photo__card {
+  margin-top: 17px;
   border-top: 1px solid #e5e5e5;
+}
+
+.photo__wrapper {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .photo__frame {
@@ -19,7 +31,8 @@
 }
 
 .photo__name {
-  padding-top: 22px;
+  padding-top: 15px;
+  padding-bottom: 4px;
   .contents;
   font-weight: bold;
   text-align: left;
@@ -28,25 +41,56 @@
 .photo__author {
   font-style: normal;
   color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.photo__likes {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 21px;
+  padding-left: 36px;
+  position: relative;
+  &::before {
+    .pseudo-element;
+    background-image: url("../img/icon-like.svg");
+    width: 22px;
+    height: 20px;
+    left: 0;
+    top: -5px;
+    opacity: 0.3;
+    }
 }
 
 .video {
   border-top: 1px solid #e5e5e5;
+  margin-top: 28px;
+  position: relative;
+  margin-bottom: 140px;
 }
 
 .video__call {
   display: block;
   .contents;
   .heading;
+  margin-top: 37px;
 }
 
 .video_description {
   .contents;
+  line-height: 24px;
+  padding: 15px 30px 20px;
 }
 
 .video-controller {
   width: 280px;
   height: 110px;
+  .pseudo-element;
+  left: 50%;
+  margin-left: -140px;
+  bottom: -62px;
 }
 
 .video-controller__volume-box {

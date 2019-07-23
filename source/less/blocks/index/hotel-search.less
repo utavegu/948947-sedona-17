@@ -1,3 +1,17 @@
+.hotel-search {
+  position: relative;
+  margin-top: 30px;
+  &::before {
+    .pseudo-element;
+    background-image: url("../img/icon-map-marker.svg");
+    width: 30px;
+    height: 30px;
+    left: 50%-5px;
+    top: 50%+16.5px;
+    z-index: 1;
+  }
+}
+
 .hotel-search__question {
   .contents;
   .heading;
@@ -7,4 +21,16 @@
 
 .hotel-search__description {
   .contents;
+  margin: 21px 20px 33px;
+  line-height: 24px;
+}
+
+.hotel-search__button {
+  margin-left: 20px;
+}
+
+.hotel-search__map {
+  margin-top: 47px;
+  margin-bottom: 13px;
+  position: relative;
 }

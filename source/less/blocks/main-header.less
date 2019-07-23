@@ -11,35 +11,25 @@
 
 .site-list__item {
   background-color: @maincolor;
-  border-bottom: #678fa8 1px solid;
-  border-top: #9ac2db 1px solid;
-}
-
-.site-list__item:first-child {
-  border-top: none;
-/*  position: relative;*/
-}
-
-.site-list__item:first-child::before {
-  content: "";
-
-  position: absolute;
-  top: 17px;
-  right: 20px;
-
-  width: 22.199px;
-  height: 22.199px;
-
-  background-image: url("../img/icon-cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  cursor: pointer;
-}
-
-.site-list__item:last-child {
-  border-bottom: none;
-  margin-bottom: 56px;
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
+  &:first-child {
+    border-top: none;
+  }
+  &:first-child::before {
+    .pseudo-element;
+    top: 17px;
+    right: 20px;
+    width: 22.199px;
+    height: 22.199px;
+    background-image: url("../img/icon-cross.svg");
+    cursor: pointer;
+  }
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 56px;
+    box-shadow: inset 0 -5px 6px -5px #333377;
+  }
 }
 
 .site-list__link {
@@ -47,15 +37,15 @@
   .heading;
   color: #ffffff;
   display: block;
-  padding: 20px 0 20px;
+  padding: 17px 0 17px;
 }
 
 .main-header__logo-link {
   position: absolute;
   left: 50%;
-  bottom: -89px;
+  bottom: -87px;
   width: 102px;
-  margin-left: -51px;
+  margin-left: -50px;
   /*Вот эти рассчёты тоже надо бы автоматизировать*/
   z-index: 1;
 }
@@ -69,21 +59,15 @@
   height: 22.928px;
   background-color: white;
   border: none;
+  &::before {
+    .pseudo-element;
+    left: 0;
+    top: 0;
+    width: 22.928px;
+    height: 22.928px;
+    background-image: url("../img/icon-menu.svg");
+  }
 }
-
-.main-navigation__toggle::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 22.928px;
-  height: 22.928px;
-  background-image: url("../img/icon-menu.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
 
 .main-header__poster {
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -92,7 +76,17 @@
   width: 320px;
   height: 390px;
   position: relative;
+  margin-bottom: 40px;
+  &::after {
+    .pseudo-element;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    height: 26.111px;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+  }
 }
+/*Не могу понять, как сделать, чтобы полностью перекрывала и не торчало 2 пикселя картинки, разные способы перепробовал*/
 
 .main-header__poster-miny {
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -101,6 +95,14 @@
   width: 320px;
   height: 158px;
   position: relative;
+  &::after {
+    .pseudo-element;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    height: 26.111px;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+  }
 }
 
 .main-header__poster-text {
