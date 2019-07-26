@@ -64,6 +64,8 @@
     }
 }
 
+
+
 .video {
   border-top: 1px solid #e5e5e5;
   margin-top: 28px;
@@ -78,7 +80,7 @@
   margin-top: 37px;
 }
 
-.video_description {
+.video__description {
   .contents;
   line-height: 24px;
   padding: 15px 30px 20px;
@@ -102,4 +104,149 @@
 .video-controller__control-box {
   height: 65px;
   background-color: #f2f2f2;
+}
+
+
+
+
+
+@media (min-width: @tablet-width) {
+
+.photo-and-video {
+  margin-top: 70px;
+}
+
+.photo-and-video__title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.photo-and-video__description {
+  width: 435px;
+  margin: 27px auto 70px;
+  padding: 0;
+  line-height: 24px;
+}
+
+
+.photo__section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+
+  margin: 0 auto;
+
+  width: 648px;
+}
+
+.photo__card {
+  border: none;
+  background-color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+  width: 324px;
+  text-align: left;
+  position: relative;
+}
+
+.photo__card--vast {
+  width: 648px;
+}
+
+.photo__wrapper {
+  width: 324px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.photo__frame {
+  margin: 0;
+  padding: 0;
+}
+
+.photo__image {
+  width: 324px;
+  height: 267px;
+}
+
+/*Проблема с изображениями - как и везде ранее. А длинное ещё и почему-то не растягивается на заданную ширину.*/
+
+.photo__card--vast .photo__image {
+  width: 648px;
+  height: 400px;
+}
+
+.photo__name {
+  padding-left: 20px;
+
+}
+
+.photo__author {
+  padding-left: 20px;
+  padding-bottom: 18px;
+}
+
+.photo__likes {
+  position: absolute;
+  right: 16px;
+  bottom: 9px;
+}
+
+
+
+.video {
+  border: none;
+  margin-top: 61px;
+  margin-bottom: 66px;
+}
+
+.video__call {
+  font-size: 30px;
+}
+
+.video__description {
+  line-height: 24px;
+  width: 415px;
+  margin: 27px auto 75px;
+  padding: 0;
+}
+
+
+/*И с постером та же история...*/
+.video__screen {
+  outline: 1px solid green;
+  width: 648px;
+  height: 499px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.video-controller {
+  width: 648px;
+  height: 93px;
+  .pseudo-element;
+  left: 50%;
+  margin-left: -324px;
+  bottom: 17px;
+}
+
+.video-controller__volume-box {
+  height: 45px;
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.video-controller__control-box {
+  height: 65px;
+  background-color: #f2f2f2;
+}
+
+
+
+
 }

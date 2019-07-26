@@ -59,20 +59,16 @@ img {
   overflow: hidden;
 }
 
-.mobile-wrapper {
-  width: 320px;
+.main-wrapper {
+  width: @mobile-width;
   margin: auto;
 }
 
-/*.tablet-wrapper {
-  width: 320px;
-  margin: auto;
+@media (min-width: @tablet-width) {
+  .main-wrapper {
+      width: @tablet-width;
+  }
 }
-
-.desktop-wrapper {
-  width: 320px;
-  margin: auto;
-}*/
 
 .button {
   display: inline-block;

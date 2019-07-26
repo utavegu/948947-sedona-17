@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="mobile-wrapper">
+  <div class="main-wrapper">
 
   <header class="main-header">
     <h1 class="main-header__title visually-hidden">Поиск гостиниц в городке Седона, штат Аризона</h1>
@@ -49,10 +49,13 @@
       Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!
       </p>
       <ul class="advantages__list">
+
         <li class="advantages__item advantages__item--opened">
-          <h3 class="advantages__title">Настоящий городок</h3>
-          <div class="advantages__number">— №1 —</div>
-          <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <header class="advantages__item-header">
+            <h3 class="advantages__title">Настоящий городок</h3>
+            <div class="advantages__number">— №1 —</div>
+            <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          </header>
           <img class="advantages__picture" src="img/main-city-mobile@1x.jpg" alt="Фотография городка Седоны" width="320" height="260">
           <section class="features">
             <div class="features__item features__item--housing">
@@ -69,27 +72,36 @@
             </div>
           </section>
         </li>
+
         <li class="advantages__item advantages__item--opened">
-          <h3 class="advantages__title">Там есть Мост Дьявола</h3>
-          <div class="advantages__number">— №2 —</div>
-          <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          <header class="advantages__item-header">
+            <h3 class="advantages__title">Там есть Мост Дьявола</h3>
+            <div class="advantages__number">— №2 —</div>
+            <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </header>
           <img class="advantages__picture" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="320" height="260">
         </li>
-        <li class="advantages__item">
-          <h3 class="advantages__title advantages__title--not-opened">Небольшая площадь</h3>
-          <div class="advantages__number">— №3 —</div>
-          <p class="advantages__description">Все интересные места находятся очень близко</p>
-        </li>
-        <li class="advantages__item">
-          <h3 class="advantages__title advantages__title--not-opened">Красивая дорога</h3>
-          <div class="advantages__number">— №4 —</div>
-          <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-        </li>
-        <li class="advantages__item">
-          <h3 class="advantages__title advantages__title--not-opened">Мало туристов</h3>
-          <div class="advantages__number">— №5 —</div>
-          <p class="advantages__description">Большинство едет в Гранд каньон и толпится там</p>
-        </li>
+
+        <div class="advantages__item--wrapper">
+          <li class="advantages__item advantages__item--not-opened">
+            <h3 class="advantages__title">Небольшая площадь</h3>
+            <div class="advantages__number">— №3 —</div>
+            <p class="advantages__description">Все интересные места находятся очень близко</p>
+          </li>
+
+          <li class="advantages__item advantages__item--not-opened">
+            <h3 class="advantages__title">Красивая дорога</h3>
+            <div class="advantages__number">— №4 —</div>
+            <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+
+          <li class="advantages__item advantages__item--not-opened">
+            <h3 class="advantages__title">Мало туристов</h3>
+            <div class="advantages__number">— №5 —</div>
+            <p class="advantages__description">Большинство едет в Гранд каньон и толпится там</p>
+          </li>
+        </div>
+
       </ul>
     </section>
     <section class="hotel-search">
