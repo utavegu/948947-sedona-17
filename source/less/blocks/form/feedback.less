@@ -11,12 +11,21 @@
 .feedback__description {
   .contents;
   line-height: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 38px;
 }
 
 .feedback__section {
   border: none;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.feedback__section::before {
+  .pseudo-element;
   border-top: 1px solid #e5e5e5;
+  width: 100%;
+  top: -25px;
+  left: 0;
 }
 
 .feedback__section-title {
@@ -76,6 +85,10 @@
   color: #000000;
 }
 
+.about .feedback__section-title {
+  margin-bottom: 20px;
+}
+
 .about__item {
   margin: 0;
   margin-bottom: 19px;
@@ -107,9 +120,6 @@
 }
 
 
-.contacts h3 {
-  margin-bottom: 25px;
-}
 
 .contacts__label {
   margin-left: 27px;
@@ -127,17 +137,17 @@
 }
 
 .impression {
-  margin-bottom: -5px;
+  margin-bottom: 13px;
 }
 
-.impression h3 {
+.impression .feedback__section-title {
   margin-top: 14px;
-  margin-bottom: 44px;
+  margin-bottom: 23px;
 }
 
 .impression__item {
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
 }
 
 .impression__input:checked + .impression__radio {
@@ -165,13 +175,12 @@
 
 
 .sights {
-  margin-bottom: -25px;
+  margin-bottom: 0;
 }
 
-.sights h3 {
+.sights .feedback__section-title {
   line-height: 1.44em;
-  margin-top: 14px;
-  margin-bottom: 37px;
+  margin-bottom: 15px;
 }
 
 .sights__item {
@@ -211,6 +220,7 @@
   width: 279px;
   height: 160px;
   margin-left: 5px;
+  margin-top: 13px;
 
   border: none;
   font-weight: bold;
@@ -264,11 +274,19 @@
   color: #000000;
 }
 
+.feedback__footer {
+  margin: 0;
+  padding: 0;
+}
 
 .feedback__button {
   width: 280px;
   margin-left: 20px;
   margin-bottom: 52px;
+}
+
+.feedback__proviso {
+  display: none;
 }
 
 
@@ -287,7 +305,7 @@
   .contents;
   line-height: 24px;
   width: 439px;
-  margin: 0 auto 16px;
+  margin: 0 auto 75px;
 }
 
 
@@ -296,35 +314,153 @@
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
+  justify-content: center;
 }
+
 
 .feedback__section {
 }
 
+.feedback__section::before {
+  border-top: none;
+}
+
 .impression {
-  width: 380px;
+  width: 381px;
   order: -1;
   border-right: 1px solid #e5e5e5;
 }
 
 .about {
-  width: 380px;
+  width: 379px;
 }
 
 .contacts,
 .sights,
 .emotion {
   width: 648px;
+  border-top: 1px solid #e5e5e5;
+}
+/*А вот тут не пойму, как границы укоротить*/
+
+.feedback__section-title {
+  font-size: 21px;
+}
+
+
+.impression .feedback__section-title {
+  margin-bottom: 55px;
+}
+
+.impression__item {
+  padding-bottom: 41px;
+  padding-left: 34px;
+}
+
+.impression__radio {
+  left: 45px;
+  top: -15px;
+}
+
+
+.about .feedback__section-title {
+  margin-bottom: 52px;
+  text-align: left;
+  margin-left: 42px;
+}
+
+.about__label {
+  margin-left: 37px;
+}
+
+.about__input {
+  margin-right: 45px;
+  &[name="forename"] {
+    width: 216px;
+  }
+  &[name="surname"] {
+    width: 178px;
+  }
+  &[name="patronymic"] {
+    width: 178px;
+  }
+}
+
+
+.contacts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contacts .feedback__section-title {
+  margin-bottom: 8px;
+}
+
+.contacts__item {
+  width: 648px;
+  padding-bottom: 10px;
+}
+
+.contacts__input {
+  width: 100%;
 }
 
 
 
+.sights {
+  margin-bottom: 17px;
+}
+
+.sights .feedback__section-title {
+  width: 278px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.sights__wrapper {
+  .flex-container;
+  width: 465px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.sights__item {
+  text-align: left;
+  width: 210px;
+}
 
 
+.emotion {
+}
+
+.emotion .feedback__section-title {
+  margin-bottom: 40px;
+}
+
+.emotion__textarea {
+  width: 648px;
+  margin-bottom: 5px;
+}
 
 
+.feedback__footer {
+  width: 648px;
+  .flex-container;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 25px;
+}
 
+.feedback__button {
+  width: 324px;
+  margin-left: 0;
+  margin-bottom: 52px;
+}
 
+.feedback__proviso {
+  display: block;
+  .contents;
+}
 
 
 

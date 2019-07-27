@@ -48,9 +48,7 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
 
         <fieldset class="feedback__section about">
-          <!-- В мобильной версии граница разположена над заголовком, в планшетной - как в ледженде, проходит сквозь него. Не придумал ничего лучше, чем сделать такую вот разметку. И в мобильной версии скрывать feedback__section-title--legend, а в планшетной - feedback__section-title--heading. (пока не реализовал.) Но чувствую, что это не правильный способ. Как правильно это можно реализовать? Больно уж много возни из-за одной только границы... Хм... псевдоэлементом? -->
-          <h3 class="feedback__section-title feedback__section-title--heading">Представьтесь:</h3>
-          <!-- <legend class="feedback__section-title feedback__section-title--legend">Представьтесь:</legend> -->
+          <legend class="feedback__section-title">Представьтесь:</legend>
           <p class="feedback__item about__item">
             <label class="feedback__field-signature about__label" for="forename">Имя*:</label>
             <input class="about__input" type="text" id="forename" name="forename" placeholder="Петр" required>
@@ -66,8 +64,7 @@
         </fieldset>
 
         <fieldset class="feedback__section contacts">
-          <h3 class="feedback__section-title feedback__section-title--heading">Контактная информация:</h3>
-          <!-- <legend class="feedback__section-title feedback__section-title--legend">Контактная информация:</legend> -->
+          <legend class="feedback__section-title">Контактная информация:</legend>
           <p class="feedback__item contacts__item">
             <label class="feedback__field-signature contacts__label" for="phone">Контактный телефон*:</label>
             <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
@@ -79,8 +76,7 @@
         </fieldset>
 
         <fieldset class="feedback__section impression">
-          <h3 class="feedback__section-title feedback__section-title--heading">Ваше общее впечатление:</h3>
-          <!-- <legend class="feedback__section-title feedback__section-title--legend">Ваше общее впечатление:</legend> -->
+          <legend class="feedback__section-title">Ваше общее впечатление:</legend>
           <p class="feedback__item impression__item">
             <label>
               <input class="impression__input visually-hidden" type="radio" name="impression" value="positive" checked>
@@ -105,45 +101,48 @@
         </fieldset>
 
         <fieldset class="feedback__section sights">
-          <h3 class="feedback__section-title feedback__section-title--heading">Посещенные достопримечательности:</h3>
-<!--           <legend class="feedback__section-title feedback__section-title--legend">Посещенные достопримечательности:</legend> -->
-          <p class="feedback__item sights__item">
-            <label>
-              <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Devil Bridge" checked>
-              <span class="sights__checkbox"></span>
-              <span class="sights__name">Мост Дьявола</span>
-            </label>
-          </p>
-          <p class="feedback__item sights__item">
-            <label>
-              <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Bell Mountain" checked>
-              <span class="sights__checkbox"></span>
-              <span class="sights__name">Гора-Колокол</span>
-            </label>
-          </p>
-          <p class="feedback__item sights__item">
-            <label>
-              <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Slide Park" checked>
-              <span class="sights__checkbox"></span>
-              <span class="sights__name">Слайд-парк</span>
-            </label>
-          </p>
-          <p class="feedback__item sights__item">
-            <label>
-              <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Red rock">
-              <span class="sights__checkbox"></span>
-              <span class="sights__name">Красные скалы</span>
-            </label>
-          </p>
+          <legend class="feedback__section-title">Посещенные достопримечательности:</legend>
+          <div class="sights__wrapper">
+            <p class="feedback__item sights__item">
+              <label>
+                <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Devil Bridge" checked>
+                <span class="sights__checkbox"></span>
+                <span class="sights__name">Мост Дьявола</span>
+              </label>
+            </p>
+            <p class="feedback__item sights__item">
+              <label>
+                <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Bell Mountain" checked>
+                <span class="sights__checkbox"></span>
+                <span class="sights__name">Гора-Колокол</span>
+              </label>
+            </p>
+            <p class="feedback__item sights__item">
+              <label>
+                <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Slide Park" checked>
+                <span class="sights__checkbox"></span>
+                <span class="sights__name">Слайд-парк</span>
+              </label>
+            </p>
+            <p class="feedback__item sights__item">
+              <label>
+                <input class="sights__input visually-hidden" type="checkbox" name="sights" value="Red rock">
+                <span class="sights__checkbox"></span>
+                <span class="sights__name">Красные скалы</span>
+              </label>
+            </p>
+          </div>
         </fieldset>
 
         <fieldset class="feedback__section emotion">
-          <h3 class="feedback__section-title feedback__section-title--heading">Опишите свои эмоции:</h3>
-          <!-- <legend class="feedback__section-title feedback__section-title--legend">Опишите свои эмоции:</legend> -->
+          <legend class="feedback__section-title">Опишите свои эмоции:</legend>
           <textarea class="emotion__textarea" name="emotion" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
-        <button class="feedback__button button" type="submit">Отправить отзыв</button>
+        <div class="feedback__footer">
+          <button class="feedback__button button" type="submit">Отправить отзыв</button>
+          <span class="feedback__proviso">* - обязательные поля</span>
+        </div>
       </form>
     </section>
   </main>
