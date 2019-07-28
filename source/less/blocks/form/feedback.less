@@ -347,7 +347,6 @@
   font-size: 21px;
 }
 
-
 .impression .feedback__section-title {
   margin-bottom: 55px;
 }
@@ -430,9 +429,6 @@
 }
 
 
-.emotion {
-}
-
 .emotion .feedback__section-title {
   margin-bottom: 40px;
 }
@@ -462,6 +458,143 @@
   .contents;
 }
 
+}
+
+
+
+
+
+@media (min-width: @desktop-width) {
+
+.feedback__title {
+  margin-top: 108px;
+}
+
+.feedback__description {
+  margin-bottom: 58px;
+}
+
+.impression {
+  width: 480px;
+}
+
+.about {
+  width: 480px;
+}
+
+.contacts,
+.sights,
+.emotion {
+  width: 960px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.impression .feedback__section-title {
+  text-align: left;
+  margin-left: 70px;
+  /*Хотя через центр и минусовой маргин поближе было...*/
+}
+
+.impression__item {
+  padding-left: 0px;
+  margin-left: -14px;
+}
+
+.impression__radio {
+  left: 7px;
+}
+
+
+.about .feedback__section-title {
+  margin-left: 65px;
+}
+
+.about__label {
+  margin-left: 60px;
+}
+
+.about__input {
+  margin-right: -10px;
+
+  &[name="forename"] {
+    width: 350px;
+  }
+  &[name="surname"] {
+    width: 312px;
+  }
+  &[name="patronymic"] {
+    width: 314px;
+  }
+}
+
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contacts .feedback__section-title {
+  margin-bottom: 61px;
+}
+
+.contacts__wrapper {
+  .flex-container;
+}
+
+.contacts__item {
+  display: inline-block;
+  width: 480px;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__label {
+  margin-left: 0;
+}
+
+.contacts__input {
+  width: 315px;
+  margin-left: 13px;
+}
+
+.contacts--not-desctop {
+  display: none;
+}
+
+
+.sights {
+  margin-bottom: 20px;
+}
+
+.sights .feedback__section-title {
+  margin-bottom: 31px;
+}
+
+.sights__wrapper {
+  width: 960px;
+}
+
+
+.emotion__textarea {
+  width: 960px;
+}
+
+
+.feedback__footer {
+  width: 960px;
+  margin-bottom: 30px;
+}
+
+.feedback__button {
+  width: 480px;
+}
+
+.feedback__proviso {
+  display: block;
+  .contents;
+}
 
 
 

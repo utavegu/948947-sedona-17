@@ -65,14 +65,16 @@
 
         <fieldset class="feedback__section contacts">
           <legend class="feedback__section-title">Контактная информация:</legend>
-          <p class="feedback__item contacts__item">
-            <label class="feedback__field-signature contacts__label" for="phone">Контактный телефон*:</label>
-            <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
-          </p>
-          <p class="feedback__item contacts__item">
-            <label class="feedback__field-signature contacts__label" for="e-mail">Электронная почта*:</label>
-            <input class="contacts__input" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
-          </p>
+          <div class="contacts__wrapper">
+            <p class="feedback__item contacts__item">
+              <label class="feedback__field-signature contacts__label" for="phone"><span class="contacts--not-desctop">Контактный</span> телефон*:</label>
+              <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
+            </p>
+            <p class="feedback__item contacts__item">
+              <label class="feedback__field-signature contacts__label" for="e-mail">Электронная почта*:</label>
+              <input class="contacts__input" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
+            </p>
+          </div>
         </fieldset>
 
         <fieldset class="feedback__section impression">

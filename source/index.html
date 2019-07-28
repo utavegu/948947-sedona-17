@@ -30,7 +30,11 @@
         </li>
       </ul>
       <a class="main-header__logo-link" href="#">
-        <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип: Седона" width="102" height="83">
+        <picture>
+          <!-- <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1280px)"> -->
+          <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
+          <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип: Седона" width="102" height="83">
+        </picture>
       </a>
       <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </nav>
@@ -56,7 +60,10 @@
             <div class="advantages__number">— №1 —</div>
             <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </header>
-          <img class="advantages__picture" src="img/main-city-mobile@1x.jpg" alt="Фотография городка Седоны" width="320" height="260">
+          <picture>
+            <source srcset="img/main-city-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="advantages__picture" src="img/main-city-mobile@1x.jpg" alt="Фотография городка Седоны" width="320" height="260">
+          </picture>
           <section class="features">
             <div class="features__item features__item--housing">
               <h4 class="features__title">Жилье</h4>
@@ -75,11 +82,15 @@
 
         <li class="advantages__item advantages__item--opened">
           <header class="advantages__item-header">
+            <!-- НЕ ЗАБУДЬ ПОЧИНИ ПОТОМ ОРДЕР - ПЕРЕМЕСТИ КУДА НАДО -->
             <h3 class="advantages__title">Там есть Мост Дьявола</h3>
             <div class="advantages__number">— №2 —</div>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </header>
-          <img class="advantages__picture" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="320" height="260">
+          <picture>
+            <source srcset="img/main-bridge-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="advantages__picture" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="320" height="260">
+          </picture>
         </li>
 
         <div class="advantages__item--wrapper">
@@ -111,7 +122,11 @@
         Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне
       </p>
       <a class="hotel-search__button button" href="#">Найти гостиницу</a>
-      <img class="hotel-search__map" src="img/bg-map-mobile@1x.jpg" alt="Карта Аризоны" width="320" height="350">
+      <picture>
+        <source srcset="img/bg-map-desktop@1x.jpg" media="(min-width: 1280px)" sizes="(min-width: 1200px) 1200w">
+        <source srcset="img/bg-map-tablet@1x.jpg" media="(min-width: 768px)" sizes="(min-width: 768px) 768w">
+        <img class="hotel-search__map" src="img/bg-map-mobile@1x.jpg" alt="Карта Аризоны" width="320" height="350">
+      </picture>
     </section>
   </main>
 
