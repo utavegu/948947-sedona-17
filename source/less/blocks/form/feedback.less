@@ -1,15 +1,31 @@
+.feedback {
+  margin-top: 40px;
+}
+
 .feedback__title {
   .contents;
   .heading;
+  margin-bottom: 32px;
 }
 
 .feedback__description {
   .contents;
+  line-height: 24px;
+  margin-bottom: 38px;
 }
 
 .feedback__section {
   border: none;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.feedback__section::before {
+  .pseudo-element;
   border-top: 1px solid #e5e5e5;
+  width: 100%;
+  top: -25px;
+  left: 0;
 }
 
 .feedback__section-title {
@@ -28,4 +44,560 @@
   background-color: #f2f2f2;
   color: #242424;
 }
-/*Вспомни как плэйсхолдеру текст задавать цвет, там как-то по хитрому, через преффиксы вроде*/
+
+.feedback__item input:-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input:-ms-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input:-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__item input::placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.about .feedback__section-title {
+  margin-bottom: 20px;
+}
+
+.about__item {
+  margin: 0;
+  margin-bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__label {
+  padding-left: 6px;
+}
+
+.about__input {
+  margin-right: 5px;
+  height: 58px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 22px;
+  &[name="forename"] {
+    width: 230px;
+  }
+  &[name="surname"] {
+    width: 192px;
+  }
+  &[name="patronymic"] {
+    width: 194px;
+  }
+}
+
+
+
+.contacts__label {
+  margin-left: 27px;
+}
+
+.contacts__input {
+  margin-top: 13px;
+  margin-left: 7px;
+  width: 280px;
+  height: 58px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 22px;
+}
+
+.impression {
+  margin-bottom: 13px;
+}
+
+.impression .feedback__section-title {
+  margin-top: 14px;
+  margin-bottom: 23px;
+}
+
+.impression__item {
+  position: relative;
+  padding-bottom: 31px;
+}
+
+.impression__input:checked + .impression__radio {
+  background-image: url("../img/icon-point.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.impression__radio {
+  position: absolute;
+  left: 6px;
+  top: -12px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.impression__name {
+  padding-left: 86px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.sights {
+  margin-bottom: 0;
+}
+
+.sights .feedback__section-title {
+  line-height: 1.44em;
+  margin-bottom: 15px;
+}
+
+.sights__item {
+  position: relative;
+  padding-bottom: 45px;
+}
+
+.sights__input:checked + .sights__checkbox {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sights__checkbox {
+  position: absolute;
+  left: 5px;
+  top: -15px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.sights__name {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 85px;
+  line-height: 18px;
+}
+
+.emotion {
+  margin-bottom: 39px;
+}
+
+.emotion__textarea {
+  width: 279px;
+  height: 160px;
+  margin-left: 5px;
+  margin-top: 13px;
+
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 22px;
+  padding-top: 17px;
+  background-color: #f2f2f2;
+  line-height: 1.44em;
+  resize: none;
+  color: #000000;
+}
+
+
+.emotion textarea:-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-ms-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.feedback__footer {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__button {
+  width: 280px;
+  margin-left: 20px;
+  margin-bottom: 52px;
+}
+
+.feedback__proviso {
+  display: none;
+}
+
+
+
+
+
+@media (min-width: @tablet-width) {
+
+.feedback__title {
+  font-size: 30.5px;
+  margin-top: 70px;
+  margin-bottom: 28px;
+}
+
+.feedback__description {
+  .contents;
+  line-height: 24px;
+  width: 439px;
+  margin: 0 auto 75px;
+}
+
+
+
+.feedback__form {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.feedback__section {
+}
+
+.feedback__section::before {
+  border-top: none;
+}
+
+.impression {
+  width: 381px;
+  order: -1;
+  border-right: 1px solid #e5e5e5;
+}
+
+.about {
+  width: 379px;
+}
+
+.contacts,
+.sights,
+.emotion {
+  width: 648px;
+  border-top: 1px solid #e5e5e5;
+}
+/*А вот тут не пойму, как границы укоротить*/
+
+.feedback__section-title {
+  font-size: 21px;
+}
+
+.impression .feedback__section-title {
+  margin-bottom: 55px;
+}
+
+.impression__item {
+  padding-bottom: 41px;
+  padding-left: 34px;
+}
+
+.impression__radio {
+  left: 45px;
+  top: -15px;
+}
+
+
+.about .feedback__section-title {
+  margin-bottom: 52px;
+  text-align: left;
+  margin-left: 42px;
+}
+
+.about__label {
+  margin-left: 37px;
+}
+
+.about__input {
+  margin-right: 45px;
+  &[name="forename"] {
+    width: 216px;
+  }
+  &[name="surname"] {
+    width: 178px;
+  }
+  &[name="patronymic"] {
+    width: 178px;
+  }
+}
+
+
+.contacts {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contacts .feedback__section-title {
+  margin-bottom: 8px;
+}
+
+.contacts__item {
+  width: 648px;
+  padding-bottom: 10px;
+}
+
+.contacts__input {
+  width: 100%;
+}
+
+
+
+.sights {
+  margin-bottom: 17px;
+}
+
+.sights .feedback__section-title {
+  width: 278px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.sights__wrapper {
+  .flex-container;
+  width: 465px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.sights__item {
+  text-align: left;
+  width: 210px;
+}
+
+
+.emotion .feedback__section-title {
+  margin-bottom: 40px;
+}
+
+.emotion__textarea {
+  width: 648px;
+  margin-bottom: 5px;
+}
+
+
+.feedback__footer {
+  width: 648px;
+  .flex-container;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 25px;
+}
+
+.feedback__button {
+  width: 324px;
+  margin-left: 0;
+  margin-bottom: 52px;
+}
+
+.feedback__proviso {
+  display: block;
+  .contents;
+}
+
+}
+
+
+
+
+
+@media (min-width: @desktop-width) {
+
+.feedback__title {
+  margin-top: 108px;
+}
+
+.feedback__description {
+  margin-bottom: 58px;
+}
+
+.impression {
+  width: 480px;
+}
+
+.about {
+  width: 480px;
+}
+
+.contacts,
+.sights,
+.emotion {
+  width: 960px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.impression .feedback__section-title {
+  text-align: left;
+  margin-left: 70px;
+  /*Хотя через центр и минусовой маргин поближе было...*/
+}
+
+.impression__item {
+  padding-left: 0px;
+  margin-left: -14px;
+}
+
+.impression__radio {
+  left: 7px;
+}
+
+
+.about .feedback__section-title {
+  margin-left: 65px;
+}
+
+.about__label {
+  margin-left: 60px;
+}
+
+.about__input {
+  margin-right: -10px;
+
+  &[name="forename"] {
+    width: 350px;
+  }
+  &[name="surname"] {
+    width: 312px;
+  }
+  &[name="patronymic"] {
+    width: 314px;
+  }
+}
+
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contacts .feedback__section-title {
+  margin-bottom: 61px;
+}
+
+.contacts__wrapper {
+  .flex-container;
+}
+
+.contacts__item {
+  display: inline-block;
+  width: 480px;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__label {
+  margin-left: 0;
+}
+
+.contacts__input {
+  width: 315px;
+  margin-left: 13px;
+}
+
+.contacts--not-desctop {
+  display: none;
+}
+
+
+.sights {
+  margin-bottom: 20px;
+}
+
+.sights .feedback__section-title {
+  margin-bottom: 31px;
+}
+
+.sights__wrapper {
+  width: 960px;
+}
+
+
+.emotion__textarea {
+  width: 960px;
+}
+
+
+.feedback__footer {
+  width: 960px;
+  margin-bottom: 30px;
+}
+
+.feedback__button {
+  width: 480px;
+}
+
+.feedback__proviso {
+  display: block;
+  .contents;
+}
+
+
+
+
+
+}

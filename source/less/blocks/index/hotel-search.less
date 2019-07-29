@@ -1,3 +1,17 @@
+.hotel-search {
+  position: relative;
+  margin-top: 30px;
+  &::before {
+    .pseudo-element;
+    background-image: url("../img/icon-map-marker.svg");
+    width: 30px;
+    height: 30px;
+    left: 50%-5px;
+    top: 50%+16.5px;
+    z-index: 1;
+  }
+}
+
 .hotel-search__question {
   .contents;
   .heading;
@@ -7,4 +21,86 @@
 
 .hotel-search__description {
   .contents;
+  margin: 21px 20px 33px;
+  line-height: 24px;
+}
+
+.hotel-search__button {
+  margin-left: 20px;
+}
+
+.hotel-search__map {
+  margin-top: 47px;
+  margin-bottom: 13px;
+  position: relative;
+}
+
+
+
+
+@media (min-width: @tablet-width) {
+
+.hotel-search__question {
+  font-size: 30px;
+  margin-top: 56px;
+}
+
+.hotel-search__description {
+  width: 440px;
+  margin: 21px auto 43px;
+}
+
+/*
+НЕ ПОНИМАЮ, КАК РАЗМЕСТИТЬ ТЕКСТ АНАЛОГИЧНЫМ ОБРАЗОМ, НЕ ТРОГАЯ РАЗМЕТКУ... Хотя конечно я мог бы создать для BR отдельный класс и спрятать его через дисплэй нон в планшетной версии, но, по-моему, это перебор.
+*/
+
+.hotel-search__button {
+  display: block;
+  width: 458px;
+  margin: 0 auto 10px;
+}
+
+.hotel-search__map {
+  width: 768px;
+}
+
+/*
+ТА ЖЕ ИСТОРИЯ И С КАРТОЙ (ЧТО И С ДРУГИМИ КОНТЕНТНЫМИ ИЗОБРАЖЕНИЯМИ) - ОНА ВСТАВЛЕНА ЧЕРЕЗ ИМГ И Я НЕ ЗНАЮ КАК ЕЁ ПРАВИЛЬНО ПОМЕНЯТЬ В ПЛАНШЕТНОЙ ВЕРСИИ. Единственное, что приходит на ум - это грузить 3 версии изображений через имг и 2 не актуальные прятать через дисплэй нон. Ну или может тут есть какие-то инструменты типа "условий".
+*/
+
+
+}
+
+
+
+
+@media (min-width: @desktop-width) {
+
+.hotel-search__question {
+  margin-top: 51px;
+}
+
+.hotel-search__description {
+  margin-top: 27px;
+  margin-bottom: 47px;
+}
+
+.hotel-search__button {
+  margin-bottom: 19px;
+}
+
+.hotel-search__map {
+  width: 1200px;
+}
+
+
+
+
+
+
+
+
+
+
+
 }

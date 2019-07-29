@@ -28,11 +28,11 @@ html {
 }
 
 body {
-/*  font-family: "PT Sans", "Arial", sans-serif;*/
-  font-family: "Courier New", Courier, monospace; /*ЭТО НУЖНО ДЛЯ САМОПРОВЕРКИ!*/
+  font-family: "PT Sans", "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  }
+  background-color: #f2f2f2;
+}
 
 a {
   text-decoration: none;
@@ -60,34 +60,38 @@ img {
   overflow: hidden;
 }
 
-.mobile-wrapper {
-  width: 320px;
+.main-wrapper {
+  width: @mobile-width;
   margin: auto;
+  background-color: #ffffff;
 }
 
-/*.tablet-wrapper {
-  width: 320px;
-  margin: auto;
+@media (min-width: @tablet-width) {
+  .main-wrapper {
+      width: @tablet-width;
+  }
 }
 
-.desktop-wrapper {
-  width: 320px;
-  margin: auto;
-}*/
+@media (min-width: @desktop-width) {
+  .main-wrapper {
+      width: 1200px;
+  }
+}
 
 .button {
   display: inline-block;
-  padding: 18px 45px;
+  padding: 17px 45px;
   text-align: center;
   vertical-align: middle;
   color: #ffffff;
   text-transform: uppercase;
   background-color: @maincolor;
   border: none;
-  min-width: 280px;
+  min-width: 278px;
   font-size: 21px;
   font-weight: bold;
   font-family: "PT Sans", "Arial", sans-serif;
+  cursor: pointer;
 }
 
 @import "blocks/main-header.less";

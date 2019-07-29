@@ -1,32 +1,72 @@
+.advantages {
+  background-color: #ffffff;
+}
+
 .advantages__header {
   .contents;
   .heading;
+  width: 260px;
+  margin: auto;
+  margin-bottom: 28px;
+  line-height: 26px;
 }
 
 .advantages__preview {
   .contents;
+  width: 260px;
+  line-height: 26px;
+  margin: auto;
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 4px;
 }
 
 .advantages__item {
   background-color: #eeeeee;
+  &--opened:first-child {
+    position: relative;
+    padding-top: 80px;
+  }
+  &--opened:first-child::before {
+    .pseudo-element;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/bg-triangle.svg");
+  }
+  &--opened:nth-child(2) {
+    margin-top: 12px;
+    padding-top: 43px;
+  }
+  &--opened {
+    color: #ffffff;
+    background-color: @maincolor;
+  }
 }
 
-.advantages__item--opened {
-  color: #ffffff;
-  background-color: @maincolor;
+.advantages__item--opened:nth-child(2) .advantages__picture {
+  order: -1;
+}
+
+.advantages__item--not-opened  {
+  padding: 0 16px 0;
 }
 
 .advantages__title {
   .contents;
   .heading;
   color: inherit;
-  font-size: 21px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.advantages__item--not-opened .advantages__title {
+  padding-top: 28px;
 }
 
 .advantages__number {
@@ -37,19 +77,250 @@
 .advantages__description {
   .contents;
   color: inherit;
+  line-height: 21px;
+  margin: 0;
+  padding: 16px 20px 41px;
+}
+
+.advantages__item--not-opened .advantages__description {
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 30px;
+}
+/*КАК УБРАТЬ НИЖНЮЮ ГРАНИЦУ У ПОСЛЕДНЕГО ЭЛЕМЕНТА - НЕ ПОЙМУ*/
+
+.advantages__picture {
+  display: block;
+}
+
+.features {
+  background-color: #ffffff;
+  padding-top: 35px;
 }
 
 .features__item {
-  background-color: #ffffff;
+  padding-left: 70px;
+  position: relative;
+  &::before {
+    .pseudo-element;
+    left: 22px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    outline: 0.1px blue dotted;
+  }
+  &--housing::before {
+    background-image: url("../img/icon-house.svg");
+    width: 37px;
+    height: 36px;
+  /*  width: 74.695px;
+    height: 72.346px;*/
+  }
+  &--souvenirs::before {
+    background-image: url("../img/icon-gift.svg");
+    width: 32px;
+    height: 38px;
+  /*  width: 63px;
+    height: 75.084px;*/
+  }
+  &--food::before {
+    background-image: url("../img/icon-burger.svg");
+    width: 40px;
+    height: 35px;
+  /*  width: 76.166px;
+    height: 68.959px;*/
+  }
 }
+/*НЕ ПОНЯЛ, ПОЧЕМУ ОНИ НЕ ПОДГОНЯЮТСЯ ПОД РАЗМЕРЫ КОНТЕЙНЕРА*/
 
 .features__title {
   .contents;
   .heading;
   text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  line-height: 26px;
 }
 
 .features__description {
   .contents;
   text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 210px;
+  line-height: 21px;
+  padding-bottom: 26px;
+}
+
+
+
+
+
+@media (min-width: @tablet-width) {
+
+.advantages__header {
+  font-size: 21px;
+  width: 490px;
+}
+
+.advantages__preview {
+  width: 490px;
+  margin-bottom: 50px;
+}
+
+.advantages__list {
+
+}
+
+.advantages__item {
+
+  &:first-child {
+    padding: 0;
+  }
+
+  &:first-child::before {
+    display: none;
+  }
+
+  &:nth-child(2) {
+    padding: 0;
+  }
+}
+
+.advantages__item--opened {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.advantages__item--wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item--not-opened {
+  width: 256px;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item--not-opened .advantages__title {
+  margin-top: 20px;
+  width: 120px;
+  text-align: center;
+}
+
+.advantages__item--not-opened .advantages__description {
+  padding: 0;
+  margin: 25px auto 45px;
+  border: none;
+  width: 170px;
+}
+
+.advantages__item-header {
+  width: 256px;
+  min-height: 256px;
+  padding-top: 46px;
+}
+
+.advantages__title {
+  width: 162px;
+  margin: auto;
+  font-size: 21px;
+}
+
+.advantages__number {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.advantages__description {
+  width: 162px;
+  margin: auto;
+  padding: 0;
+}
+
+/*ВОТ ТУТ ЕСТЬ ПРОБЛЕМА! ЭТО ИЗОБРАЖЕНИЕ КОНТЕНТНОЕ, НО В ПЛАШЕТНОЙ ВЕРСИИ ЕГО НАДО ЗАМЕНИТЬ. КАК - НЕ ЗНАЮ*/
+
+
+.advantages__picture {
+  width: 512px;
+  height: 256px;
+}
+
+
+.features {
+  width: 768px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.features__item  {
+  width: 256px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  &::before {
+    left: 50%;
+    margin-left: -40px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 125px;
+  margin-bottom: 20px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.features__description {
+  margin: 0 auto;
+  padding: 0;
+  width: 170px;
+  margin-bottom: 50px;
+}
+
+
+
+}
+
+
+
+
+
+@media (min-width: @desktop-width) {
+
+.advantages__item-header {
+  width: 400px;
+}
+
+.advantages__picture {
+  width: 800px;
+}
+
+.features {
+  width: 100%;
+}
+
+.features__item  {
+  width: 400px;
+}
+
+.advantages__item--not-opened {
+  width: 400px;
+}
+
+
+
+
+
+
+
 }

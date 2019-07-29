@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона - Фото и видео</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="mobile-wrapper">
+  <div class="main-wrapper">
   <header class="main-header">
     <h1 class="visually-hidden">Поиск гостиниц в городке Седона, штат Аризона</h1>
     <nav class="main-navigation">
@@ -26,7 +27,7 @@
           <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
         </li>
       </ul>
-      <a class="main-header__logo-link" href="#">
+      <a class="main-header__logo-link" href="index.html">
         <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип: Седона" width="102" height="83">
       </a>
       <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -43,53 +44,69 @@
     </header>
     <section class="photo">
       <h3 class="photo__title visually-hidden">Фото</h3>
-      <div class="photo__card">
-        <figure class="photo__frame">
-          <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280" height="280">
-          <figcaption class="photo__name">Неродные просторы</figcaption>
-        </figure>
-        <address class="photo__author">Автор фото: Борис</address>
-        <p class="photo__likes">1350</p>
-      </div>
-      <div class="photo__card">
-        <figure class="photo__frame">
-          <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
-          <figcaption class="photo__name">Местная растительность</figcaption>
-        </figure>
-        <address class="photo__author">Автор фото: Сергей</address>
-        <p class="photo__likes">143</p>
-      </div>
-      <div class="photo__card">
-        <figure class="photo__frame">
-          <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
-          <figcaption class="photo__name">Дорога на север</figcaption>
-        </figure>
-        <address class="photo__author">Автор фото: Петр</address>
-        <p class="photo__likes">96</p>
-      </div>
-      <div class="photo__card">
-        <figure class="photo__frame">
-          <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
-          <figcaption class="photo__name">Мост Дьявола</figcaption>
-        </figure>
-        <address class="photo__author">Автор фото: Антон</address>
-        <p class="photo__likes">254</p>
+
+      <div class="photo__section-wrapper">
+
+        <div class="photo__card photo__card--vast">
+          <div class="photo__wrapper">
+            <figure class="photo__frame">
+              <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280" height="280">
+              <figcaption class="photo__name">Неродные просторы</figcaption>
+            </figure>
+            <address class="photo__author">Автор фото: Борис</address>
+            <p class="photo__likes">1350</p>
+          </div>
+        </div>
+
+        <div class="photo__card photo__card--vegetation">
+          <div class="photo__wrapper">
+            <figure class="photo__frame">
+              <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+              <figcaption class="photo__name">Местная растительность</figcaption>
+            </figure>
+            <address class="photo__author">Автор фото: Сергей</address>
+            <p class="photo__likes">143</p>
+          </div>
+        </div>
+
+        <div class="photo__card photo__card--road">
+          <div class="photo__wrapper">
+            <figure class="photo__frame">
+              <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+              <figcaption class="photo__name">Дорога на север</figcaption>
+            </figure>
+            <address class="photo__author">Автор фото: Петр</address>
+            <p class="photo__likes">96</p>
+          </div>
+        </div>
+
+        <div class="photo__card photo__card--bridge">
+          <div class="photo__wrapper">
+            <figure class="photo__frame">
+              <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+              <figcaption class="photo__name">Мост Дьявола</figcaption>
+            </figure>
+            <address class="photo__author">Автор фото: Антон</address>
+            <p class="photo__likes">254</p>
+          </div>
+        </div>
+
       </div>
     </section>
+
     <section class="video">
       <h3 class="video__title visually-hidden">Видео</h3>
       <b class="video__call">Всё ещё сомневаетесь?</b>
-      <p class="video_description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      <video class="video__screen" src="#" width="321" height="201" poster="img/video-mobile@1x.jpg"></video>
+      <div class="video-controller">
+        <div class="video-controller__volume-box">
+          <svg class="video-controller__volume-scale"></svg>
+          <svg class="video-controller__volume-slider"></svg>
+        </div>
+        <div class="video-controller__control-box"></div>
+      </div>
     </section>
-    <video src="#" width="321" height="201" poster="img/video-mobile@1x.jpg"></video>
-    <div class="video-controller">
-      <div class="video-controller__volume-box">
-        <svg class="video-controller__volume-scale"></svg>
-        <svg class="video-controller__volume-slider"></svg>
-      </div>
-      <div class="video-controller__control-box">
-      </div>
-    </div>
   </main>
 
   <footer class="main-footer">
