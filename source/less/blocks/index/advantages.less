@@ -106,7 +106,6 @@
     top: -5px;
     width: 20px;
     height: 20px;
-    outline: 0.1px blue dotted;
   }
   &--housing::before {
     background-image: url("../img/icon-house.svg");
@@ -168,10 +167,6 @@
   margin-bottom: 50px;
 }
 
-.advantages__list {
-
-}
-
 .advantages__item {
 
   &:first-child {
@@ -191,6 +186,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
+}
+
+.advantages__item--opened:nth-of-type(2) .advantages__photo-frame {
+  order: -1;
 }
 
 .advantages__item--wrapper {
@@ -271,6 +270,10 @@
   }
 }
 
+.features__item--souvenirs {
+  order: 1;
+}
+
 .features__title {
   margin: 0;
   padding: 0;
@@ -301,8 +304,21 @@
   width: 400px;
 }
 
+.advantages__photo-frame {
+  width: 800px;
+  height: 256px;
+  overflow: hidden;
+/*  object-fit: contain;*/
+}
+
 .advantages__picture {
   width: 800px;
+  height: 400px;
+  margin-top: -71px;
+}
+
+.advantages__item--opened:nth-of-type(2) .advantages__picture {
+  margin-top: -76px;
 }
 
 .features {

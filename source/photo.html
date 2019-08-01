@@ -28,7 +28,11 @@
         </li>
       </ul>
       <a class="main-header__logo-link" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип: Седона" width="102" height="83">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип: Седона" width="102" height="83">
+        </picture>
       </a>
       <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </nav>
@@ -50,7 +54,11 @@
         <div class="photo__card photo__card--vast">
           <div class="photo__wrapper">
             <figure class="photo__frame">
-              <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280" height="280">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
+                <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы" width="280" height="280">
+              </picture>
               <figcaption class="photo__name">Неродные просторы</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Борис</address>
@@ -61,7 +69,11 @@
         <div class="photo__card photo__card--vegetation">
           <div class="photo__wrapper">
             <figure class="photo__frame">
-              <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
+                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
+                <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
+              </picture>
               <figcaption class="photo__name">Местная растительность</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Сергей</address>
@@ -72,7 +84,11 @@
         <div class="photo__card photo__card--road">
           <div class="photo__wrapper">
             <figure class="photo__frame">
-              <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
+                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
+                <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
+              </picture>
               <figcaption class="photo__name">Дорога на север</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Петр</address>
@@ -83,7 +99,11 @@
         <div class="photo__card photo__card--bridge">
           <div class="photo__wrapper">
             <figure class="photo__frame">
-              <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
+                <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
+              </picture>
               <figcaption class="photo__name">Мост Дьявола</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Антон</address>
@@ -98,6 +118,7 @@
       <h3 class="video__title visually-hidden">Видео</h3>
       <b class="video__call">Всё ещё сомневаетесь?</b>
       <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      <!-- У ПОСТЕРА НЕ ЗНАЮ КАК ПОДТЯГИВАТЬ РАЗНЫЕ ИЗОБРАЖЕНИЯ -->
       <video class="video__screen" src="#" width="321" height="201" poster="img/video-mobile@1x.jpg"></video>
       <div class="video-controller">
         <div class="video-controller__volume-box">
