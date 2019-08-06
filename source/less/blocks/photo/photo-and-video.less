@@ -53,7 +53,7 @@
   margin-bottom: 21px;
   padding-left: 36px;
   position: relative;
-  &::before {
+/*  &::before {
     .pseudo-element;
     background-image: url("../img/icon-like.svg");
     width: 22px;
@@ -61,7 +61,7 @@
     left: 0;
     top: -5px;
     opacity: 0.3;
-    }
+    }*/
 }
 
 
@@ -84,6 +84,18 @@
   .contents;
   line-height: 24px;
   padding: 15px 30px 20px;
+}
+
+.video__screen {
+  background-image: url("../img/video-mobile@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-mobile@2x.jpg");
+    }
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  display: block;
+  position: relative;
 }
 
 .video-controller {
@@ -174,8 +186,6 @@
   height: 267px;
 }
 
-/*Проблема с изображениями - как и везде ранее. А длинное ещё и почему-то не растягивается на заданную ширину.*/
-
 .photo__card--vast .photo__image {
   width: 648px;
   height: 400px;
@@ -216,15 +226,13 @@
   padding: 0;
 }
 
-/*И с постером та же история...*/
-
 .video__screen {
-  outline: 1px solid green;
+  background-image: url("../img/video-tablet@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   width: 648px;
   height: 499px;
-  margin: 0 auto;
-  display: block;
-  position: relative;
 }
 
 /*Ты псевдоэлемент, но ты не псевдоэлемент? Я что, бухой это верстал чтоли?.. Ладно, потом разберемся...*/
@@ -318,7 +326,7 @@
   right: 20px;
   bottom: 12px;
     &::before {
-    /*Заинлайнить тебя чтоли...*/
+    /*Заинлайнить тебя чтоли... Не, погоди, на втором уровне это хитрее делается*/
     left: 3px;
     /*top: -5px;*/
     }
@@ -338,7 +346,10 @@
 }
 
 .video__screen {
-  outline: 1px solid green;
+  background-image: url("../img/video-desktop@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   width: 800px;
   height: 500px;
 }

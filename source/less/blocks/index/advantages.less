@@ -86,7 +86,10 @@
   border-bottom: 1px solid #d6d6d6;
   padding-bottom: 30px;
 }
-/*КАК УБРАТЬ НИЖНЮЮ ГРАНИЦУ У ПОСЛЕДНЕГО ЭЛЕМЕНТА - НЕ ПОЙМУ*/
+
+.advantages__item--tourists .advantages__description {
+  border-bottom: none;
+}
 
 .advantages__picture {
   display: block;
@@ -206,8 +209,13 @@
 
 .advantages__item--not-opened .advantages__title {
   margin-top: 20px;
+  margin-bottom: 11px;
   width: 120px;
   text-align: center;
+}
+
+.advantages__item--not-opened .advantages__number {
+  margin: 0;
 }
 
 .advantages__item--not-opened .advantages__description {
@@ -217,6 +225,11 @@
   width: 170px;
 }
 
+.advantages__item--road .advantages__description {
+  width: 140px;
+  text-align: center;
+}
+
 .advantages__item-header {
   width: 256px;
   min-height: 256px;
@@ -224,14 +237,14 @@
 }
 
 .advantages__title {
-  width: 162px;
+  width: 151px;
   margin: auto;
   font-size: 21px;
 }
 
 .advantages__number {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 23px;
 }
 
 .advantages__description {
@@ -239,9 +252,6 @@
   margin: auto;
   padding: 0;
 }
-
-/*ВОТ ТУТ ЕСТЬ ПРОБЛЕМА! ЭТО ИЗОБРАЖЕНИЕ КОНТЕНТНОЕ, НО В ПЛАШЕТНОЙ ВЕРСИИ ЕГО НАДО ЗАМЕНИТЬ. КАК - НЕ ЗНАЮ*/
-
 
 .advantages__picture {
   width: 512px;
@@ -286,9 +296,15 @@
 .features__description {
   margin: 0 auto;
   padding: 0;
-  width: 170px;
+  width: 158px;
   margin-bottom: 50px;
+  text-align: center;
 }
+
+.features__item--souvenirs .features__description {
+  width: 168px;
+}
+
 
 
 
@@ -308,7 +324,6 @@
   width: 800px;
   height: 256px;
   overflow: hidden;
-/*  object-fit: contain;*/
 }
 
 .advantages__picture {

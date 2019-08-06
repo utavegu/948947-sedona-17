@@ -12,20 +12,23 @@
 
 .social__list {
   list-style: none;
-  margin: 0;
+  width: 153px;
+  margin: 0 auto;
   padding: 0;
+  .flex-container;
 }
 
 .social__item {
   background-color: @maincolor;
   width: 47px;
   height: 48px;
-  margin-right: 1px;
-  display: inline-block;
-  vertical-align: middle;
   position: relative;
+  margin-right: 6px;
 }
-/*Что-то у меня расстояние между контейнерами какое-то неодинаковое...*/
+
+.social__item:last-child {
+  margin-right: 0;
+}
 
 .social__link {
   display: block;
@@ -68,13 +71,14 @@
 }
 
 .copyright__link {
-  background-image: url("../img/htmlacademy.svg");
+  /*background-image: url("../img/htmlacademy.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  width: 42px;
-  height: 42px;
+  background-position: center;*/
+  width: 27px;
+  height: 34px;
   display: inline-block;
   vertical-align: middle;
+  fill: red;
 }
 
 
@@ -85,8 +89,18 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: flex-start;
 }
+
+.social__list {
+  margin-top: 10px;
+}
+
+.main-footer__copyright {
+  margin-top: 13px;
+}
+
+
 
 }
 
