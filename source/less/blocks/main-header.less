@@ -52,7 +52,6 @@
   width: 102px;
   height: 84px;
   margin-left: -50px;
-  /*Вот эти рассчёты тоже надо бы автоматизировать*/
   z-index: 1;
 }
 
@@ -93,9 +92,10 @@
     width: 320px;
     height: 26.111px;
     background-image: url("../img/bg-intro-triangle-mobile.svg");
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
   }
 }
-/*Не могу понять, как сделать, чтобы полностью перекрывала и не торчало 2 пикселя картинки, разные способы перепробовал*/
 
 .main-header__poster-miny {
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -103,7 +103,7 @@
       background-image: url("../img/bg-back-mobile@2x.jpg");
     }
   background-repeat: no-repeat;
-  background-position: 70% 70%;
+  background-position: 50% 100%;
   width: 320px;
   height: 158px;
   position: relative;
@@ -114,6 +114,8 @@
     width: 320px;
     height: 26.111px;
     background-image: url("../img/bg-intro-triangle-mobile.svg");
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
   }
 }
 
@@ -193,6 +195,7 @@
     width: 768px;
     height: 57px;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
+    border: none;
   }
 }
 
@@ -220,6 +223,7 @@
     width: 768px;
     height: 57px;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
+    border: none;
   }
 }
 
@@ -259,14 +263,15 @@
 
 .main-header__poster {
   margin-top: 0;
+  width: 1200px;
   background-image: url("../img/bg-back-desktop@1x.jpg");
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
-  width: 1200px;
   &::after {
     width: 1200px;
     background-image: url("../img/bg-intro-triangle-desktop.svg");
+    border: none;
   }
 }
 
@@ -279,8 +284,9 @@
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   &::after {
-    background-image: url("../img/bg-intro-triangle-desktop.svg");
     width: 1200px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+    border: none;
   }
 }
 

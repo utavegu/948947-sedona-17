@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-<!--   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -62,6 +61,9 @@
           </header>
           <div class="advantages__photo-frame">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
               <source media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
               <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
               <img class="advantages__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Фотография городка Седоны" width="320" height="260">
@@ -85,13 +87,15 @@
 
         <li class="advantages__item advantages__item--opened">
           <header class="advantages__item-header">
-            <!-- НЕ ЗАБУДЬ ПОЧИНИ ПОТОМ ОРДЕР - ПЕРЕМЕСТИ КУДА НАДО -->
             <h3 class="advantages__title">Там есть Мост Дьявола</h3>
             <div class="advantages__number">— №2 —</div>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </header>
           <div class="advantages__photo-frame">
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
               <source media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
               <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
               <img class="advantages__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола" width="320" height="260">
@@ -100,19 +104,19 @@
         </li>
 
         <div class="advantages__item--wrapper">
-          <li class="advantages__item advantages__item--not-opened">
+          <li class="advantages__item advantages__item--not-opened advantages__item--square">
             <h3 class="advantages__title">Небольшая площадь</h3>
             <div class="advantages__number">— №3 —</div>
             <p class="advantages__description">Все интересные места находятся очень близко</p>
           </li>
 
-          <li class="advantages__item advantages__item--not-opened">
+          <li class="advantages__item advantages__item--not-opened advantages__item--road">
             <h3 class="advantages__title">Красивая дорога</h3>
             <div class="advantages__number">— №4 —</div>
             <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
 
-          <li class="advantages__item advantages__item--not-opened">
+          <li class="advantages__item advantages__item--not-opened advantages__item--tourists">
             <h3 class="advantages__title">Мало туристов</h3>
             <div class="advantages__number">— №5 —</div>
             <p class="advantages__description">Большинство едет в Гранд каньон и толпится там</p>
@@ -125,10 +129,14 @@
       <h2 class="hotel-search__title visually-hidden">Поиск отелей</h2>
       <b class="hotel-search__question">Заинтересовались?</b>
       <p class="hotel-search__description">
-        Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне
+        Укажите предполагаемые даты поездки, <br class="not-mobile"> и мы покажем вам лучшие предложения гостиниц в Cедоне
       </p>
       <a class="hotel-search__button button" href="#">Найти гостиницу</a>
       <picture>
+        <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
         <source media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x" sizes="(min-width: 1280px) 1280w">
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
         <img class="hotel-search__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта Аризоны" width="320" height="350">

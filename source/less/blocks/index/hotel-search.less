@@ -25,6 +25,10 @@
   line-height: 24px;
 }
 
+.not-mobile {
+  display: none;
+}
+
 .hotel-search__button {
   margin-left: 20px;
 }
@@ -40,19 +44,26 @@
 
 @media (min-width: @tablet-width) {
 
+.hotel-search {
+  &::before {
+    left: 50%-2px;
+    top: 50%+18px;
+  }
+}
+
 .hotel-search__question {
   font-size: 30px;
-  margin-top: 56px;
+  margin-top: 50px;
 }
 
 .hotel-search__description {
   width: 440px;
-  margin: 21px auto 43px;
+  margin: 27px auto 43px;
 }
 
-/*
-НЕ ПОНИМАЮ, КАК РАЗМЕСТИТЬ ТЕКСТ АНАЛОГИЧНЫМ ОБРАЗОМ, НЕ ТРОГАЯ РАЗМЕТКУ... Хотя конечно я мог бы создать для BR отдельный класс и спрятать его через дисплэй нон в планшетной версии, но, по-моему, это перебор.
-*/
+.not-mobile {
+  display: block;
+}
 
 .hotel-search__button {
   display: block;
@@ -64,9 +75,6 @@
   width: 768px;
 }
 
-/*
-ТА ЖЕ ИСТОРИЯ И С КАРТОЙ (ЧТО И С ДРУГИМИ КОНТЕНТНЫМИ ИЗОБРАЖЕНИЯМИ) - ОНА ВСТАВЛЕНА ЧЕРЕЗ ИМГ И Я НЕ ЗНАЮ КАК ЕЁ ПРАВИЛЬНО ПОМЕНЯТЬ В ПЛАНШЕТНОЙ ВЕРСИИ. Единственное, что приходит на ум - это грузить 3 версии изображений через имг и 2 не актуальные прятать через дисплэй нон. Ну или может тут есть какие-то инструменты типа "условий".
-*/
 
 
 }

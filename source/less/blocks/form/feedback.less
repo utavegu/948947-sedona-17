@@ -339,9 +339,21 @@
 .sights,
 .emotion {
   width: 648px;
+  margin: 0;
+  padding: 0;
   border-top: 1px solid #e5e5e5;
 }
-/*А вот тут не пойму, как границы укоротить*/
+
+.contacts .feedback__section-title,
+.sights .feedback__section-title,
+.emotion .feedback__section-title {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  width: 290px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
 
 .feedback__section-title {
   font-size: 21px;
@@ -388,11 +400,11 @@
 
 .contacts {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
 }
 
 .contacts .feedback__section-title {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .contacts__item {
@@ -400,20 +412,27 @@
   padding-bottom: 10px;
 }
 
+.contacts__label {
+  margin: 0;
+  margin-left: 21px;
+}
+
 .contacts__input {
   width: 100%;
+  margin: 0;
+  margin-top: 13px;
 }
 
 
 
 .sights {
-  margin-bottom: 17px;
+  margin-bottom: 37px;
 }
 
 .sights .feedback__section-title {
   width: 278px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .sights__wrapper {
@@ -426,16 +445,22 @@
 .sights__item {
   text-align: left;
   width: 210px;
+  margin-bottom: 10px;
 }
 
 
+
+.emotion {
+  margin-bottom: 55px;
+}
+
 .emotion .feedback__section-title {
-  margin-bottom: 40px;
+  margin-bottom: 58px;
 }
 
 .emotion__textarea {
   width: 648px;
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 
@@ -565,21 +590,38 @@
 
 
 .sights {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .sights .feedback__section-title {
-  margin-bottom: 31px;
+  margin-bottom: 40px;
 }
 
 .sights__wrapper {
   width: 960px;
+  justify-content: space-between;
 }
+
+.sights__item {
+  text-align: left;
+  width: 205px;
+}
+
+.sights__checkbox {
+  top: -18px;
+  left: 0px;
+}
+
+.sights__name {
+  padding-left: 80px;
+}
+
 
 
 .emotion__textarea {
   width: 960px;
 }
+
 
 
 .feedback__footer {

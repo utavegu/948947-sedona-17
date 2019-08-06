@@ -9,6 +9,35 @@
 </head>
 
 <body>
+
+  <!-- <include src="img/sprite-photo.svg"></include> -->
+
+  <svg style="display:none">
+
+  <symbol viewBox="0 0 27 34" id="logo-academy">
+    <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
+  </symbol>
+
+  <symbol viewBox="0 0 22 20" id="icon-like">
+    <path d="M12.383 3.646l-.637 2.929L11.219 9H19.9v2l.001.058L17 18H8V8.029l.014-.015 4.369-4.368M2 10v8-8M13.2 0L6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1zM4 8H0v12h4V8zm18 1v.044V9z"/>
+  </symbol>
+
+  <symbol viewBox="0 0 20 20" id="icon-video-fullscreen">
+    <g fill="#454545">
+      <path d="M0 0v6h3V3h3V0H3zM3 14H0v6h6v-3H3zM17 0h-3v3h3v3h3V0zM17 17h-3v3h6v-6h-3z"/>
+    </g>
+  </symbol>
+
+  <symbol viewBox="0 0 16 20" id="icon-video-replay">
+    <path d="M8 4V0L3 5l5 5V6c3.315 0 6 2.686 6 6s-2.685 6-6 6-6-2.686-6-6H0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+  </symbol>
+
+  <symbol viewBox="0 0 32 20" id="icon-video-subtitles">
+    <path fill="#454545" d="M29 0H3C1.35 0 0 1.35 0 3v14c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM14.403 15.854a8.61 8.61 0 0 1-1.678.164 5.986 5.986 0 0 1-1.976-.323c-.623-.214-1.172-.562-1.646-1.041s-.852-1.103-1.133-1.868c-.28-.766-.419-1.695-.419-2.786 0-1.134.157-2.085.471-2.851.315-.768.723-1.384 1.224-1.854a4.53 4.53 0 0 1 1.679-1.008 5.86 5.86 0 0 1 1.852-.307c.66 0 1.22.045 1.678.134.457.087.835.192 1.133.313l-.448 1.92a3.332 3.332 0 0 0-.902-.265A8.244 8.244 0 0 0 12.973 6c-.915 0-1.649.325-2.206.977-.558.651-.836 1.663-.836 3.031 0 .598.067 1.142.199 1.632.132.493.334.913.603 1.26.271.349.607.619 1.01.812.402.193.867.29 1.396.29.496 0 .915-.049 1.257-.148.342-.099.639-.227.893-.38l.463 1.841c-.354.249-.803.43-1.349.539zm8.698 0a8.618 8.618 0 0 1-1.678.164 5.986 5.986 0 0 1-1.976-.323c-.623-.214-1.172-.562-1.646-1.041s-.852-1.103-1.133-1.868c-.281-.767-.421-1.695-.421-2.786 0-1.134.157-2.085.471-2.851.314-.768.723-1.384 1.223-1.854a4.526 4.526 0 0 1 1.68-1.008 5.858 5.858 0 0 1 1.851-.307c.661 0 1.221.045 1.678.134a6.05 6.05 0 0 1 1.133.313l-.446 1.918a3.314 3.314 0 0 0-.901-.265A8.569 8.569 0 0 0 21.67 6c-.915 0-1.649.325-2.206.977-.558.651-.836 1.663-.836 3.031 0 .598.067 1.142.199 1.632.132.493.334.913.603 1.26.271.349.606.619 1.009.812.402.193.868.29 1.396.29.497 0 .915-.049 1.257-.148.342-.099.64-.227.894-.38l.463 1.841c-.353.249-.803.43-1.348.539z"/>
+  </symbol>
+
+</svg>
+
   <div class="main-wrapper">
   <header class="main-header">
     <h1 class="visually-hidden">Поиск гостиниц в городке Седона, штат Аризона</h1>
@@ -55,6 +84,9 @@
           <div class="photo__wrapper">
             <figure class="photo__frame">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
                 <source media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
                 <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
                 <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы" width="280" height="280">
@@ -62,7 +94,12 @@
               <figcaption class="photo__name">Неродные просторы</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Борис</address>
-            <p class="photo__likes">1350</p>
+            <p class="photo__likes">
+              <svg width="22" height="20">
+                <use xlink:href="#icon-like"></use>
+              </svg>
+              1350
+            </p>
           </div>
         </div>
 
@@ -70,6 +107,9 @@
           <div class="photo__wrapper">
             <figure class="photo__frame">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
                 <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
                 <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
                 <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
@@ -77,7 +117,12 @@
               <figcaption class="photo__name">Местная растительность</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Сергей</address>
-            <p class="photo__likes">143</p>
+            <p class="photo__likes">
+              <svg width="22" height="20">
+                <use xlink:href="#icon-like"></use>
+              </svg>
+              143
+            </p>
           </div>
         </div>
 
@@ -85,6 +130,9 @@
           <div class="photo__wrapper">
             <figure class="photo__frame">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
                 <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
                 <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
                 <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
@@ -92,7 +140,12 @@
               <figcaption class="photo__name">Дорога на север</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Петр</address>
-            <p class="photo__likes">96</p>
+            <p class="photo__likes">
+              <svg width="22" height="20">
+                <use xlink:href="#icon-like"></use>
+              </svg>
+              96
+            </p>
           </div>
         </div>
 
@@ -100,6 +153,9 @@
           <div class="photo__wrapper">
             <figure class="photo__frame">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
                 <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x" sizes="(min-width: 1200px) 1200w">
                 <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
                 <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
@@ -107,7 +163,12 @@
               <figcaption class="photo__name">Мост Дьявола</figcaption>
             </figure>
             <address class="photo__author">Автор фото: Антон</address>
-            <p class="photo__likes">254</p>
+            <p class="photo__likes">
+              <svg width="22" height="20">
+                <use xlink:href="#icon-like"></use>
+              </svg>
+              254
+            </p>
           </div>
         </div>
 
@@ -118,14 +179,24 @@
       <h3 class="video__title visually-hidden">Видео</h3>
       <b class="video__call">Всё ещё сомневаетесь?</b>
       <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      <!-- У ПОСТЕРА НЕ ЗНАЮ КАК ПОДТЯГИВАТЬ РАЗНЫЕ ИЗОБРАЖЕНИЯ -->
-      <video class="video__screen" src="#" width="321" height="201" poster="img/video-mobile@1x.jpg"></video>
+      <video class="video__screen" src="#" width="321" height="201"></video>
       <div class="video-controller">
         <div class="video-controller__volume-box">
+          <!-- ЭМММ... это же не звук, а прогресс видео. Таймлайн. -->
           <svg class="video-controller__volume-scale"></svg>
           <svg class="video-controller__volume-slider"></svg>
         </div>
-        <div class="video-controller__control-box"></div>
+        <div class="video-controller__control-box">
+          <svg width="16" height="20">
+            <use xlink:href="#icon-video-replay"></use>
+          </svg>
+          <svg width="32" height="20">
+            <use xlink:href="#icon-video-subtitles"></use>
+          </svg>
+          <svg width="20" height="20">
+            <use xlink:href="#icon-video-fullscreen"></use>
+          </svg>
+        </div>
       </div>
     </section>
   </main>
@@ -148,8 +219,14 @@
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="user-list__login-icon" width="27" height="34">
+          <!-- <use xlink:href="img/sprite-photo.svg#logo-academy"></use> -->
+          <use xlink:href="#logo-academy"></use>
+        </svg>
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
     </div>
   </footer>
 
