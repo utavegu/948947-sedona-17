@@ -3,10 +3,25 @@ var menuToggleButton = document.querySelector(".main-navigation__toggle-button")
 var menuClose = document.querySelector(".site-list__close");
 var menuNavigation = document.querySelector(".site-list");
 
+//В принципе на мобильном этот скрипт работает, но чтобы реагировал на вьюпорт - написал вариант, который под ним... который работает так же
+// window.onload = function() {
+//   if (screen.width <= 320) {
+//     menuNavigation.classList.add("hidden");
+//     menuToggleSection.classList.add("appear");
+//   }
+// }
+
 window.onload = function() {
-  menuNavigation.classList.add("hidden");
-  menuToggleSection.classList.add("appear");
-};
+  if (document.body.clientWidth <= 320) {
+    menuNavigation.classList.add("hidden");
+    menuToggleSection.classList.add("appear");
+  }
+  else {
+    menuNavigation.classList.remove("hidden");
+    menuToggleSection.classList.remove("appear");
+    menuClose.classList.remove("appear");
+  }
+}
 
 menuToggleButton.addEventListener("click", function (evt) {
   evt.preventDefault();
