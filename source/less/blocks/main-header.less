@@ -21,20 +21,29 @@
   &:first-child {
     border-top: none;
   }
-  &:first-child::before {
-    .pseudo-element;
-    top: 17px;
-    right: 20px;
-    width: 22.199px;
-    height: 22.199px;
-    background-image: url("../img/icon-cross.svg");
-    cursor: pointer;
-  }
   &:last-child {
     border-bottom: none;
-    margin-bottom: 56px;
     box-shadow: inset 0 -5px 6px -5px #333377;
   }
+}
+
+.site-list__close {
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @maincolor;
+  width: 22.199px;
+  height: 22.199px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+
+.appear {
+  display: inline-block;
 }
 
 .site-list__link {
@@ -43,6 +52,10 @@
   color: #ffffff;
   display: block;
   padding: 17px 0 17px;
+}
+
+.site-list.hidden {
+  display: none;
 }
 
 .main-header__logo-link {
@@ -55,10 +68,21 @@
   z-index: 1;
 }
 
-.main-navigation__toggle {
+.main-navigation__toggle-section {
+  min-height: 56px;
+  position: relative;
+  display: none;
+}
+
+.main-navigation__toggle-section.appear,
+.site-list__close.appear {
+  display: block;
+}
+
+.main-navigation__toggle-button {
   position: absolute;
   right: 20px;
-  bottom: -37px;
+  bottom: 16px;
   cursor: pointer;
   width: 22.928px;
   height: 22.928px;
@@ -84,6 +108,8 @@
   width: 320px;
   height: 390px;
   position: relative;
+  padding-top: 56px;
+  margin-top: -1px;
   margin-bottom: 40px;
   &::after {
     .pseudo-element;
@@ -152,9 +178,9 @@
   margin: 0;
   padding: 0;
 
-  &:first-child::before {
-    display: none;
-  }
+  // &:first-child::before {
+  //   display: none;
+  // }
 
   &:last-child {
     box-shadow: none;
@@ -166,6 +192,10 @@
   margin-left: 156px;
 }
 
+.site-list__close {
+    display: none;
+}
+
 .site-list__link {
   .contents;
   color: #000000;
@@ -175,7 +205,7 @@
   top: 0;
 }
 
-.main-navigation__toggle {
+.main-navigation__toggle-section {
   display: none;
 }
 
