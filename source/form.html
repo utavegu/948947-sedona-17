@@ -13,7 +13,7 @@
 <body>
 
   <div style="display:none">
-    <include src="source/img/sprite-test.svg"></include>
+    <include src="source/img/sprite.svg"></include>
   </div>
 
   <div class="main-wrapper">
@@ -85,11 +85,11 @@
           <legend class="feedback__section-title">Контактная информация:</legend>
           <div class="contacts__wrapper">
             <p class="feedback__item contacts__item">
-              <label class="feedback__field-signature contacts__label" for="phone"><span class="contacts--not-desctop">Контактный</span> телефон*:</label>
+              <label class="feedback__field-signature contacts__label contacts__label--phone" for="phone"><span class="contacts--not-desctop">Контактный</span> телефон*:</label>
               <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
             </p>
             <p class="feedback__item contacts__item">
-              <label class="feedback__field-signature contacts__label" for="e-mail">Электронная почта*:</label>
+              <label class="feedback__field-signature contacts__label contacts__label--mail" for="e-mail">Электронная почта*:</label>
               <input class="contacts__input" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
             </p>
           </div>
@@ -186,7 +186,12 @@
   </div>
   <div class="main-footer__copyright copyright">
     <b class="copyright__text">Разработано</b>
-    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <svg class="user-list__login-icon" width="27" height="34">
+        <use xlink:href="#logo-htmlacademy_spr"></use>
+      </svg>
+      <span class="visually-hidden">HTML Academy</span>
+    </a>
   </div>
 </footer>
 

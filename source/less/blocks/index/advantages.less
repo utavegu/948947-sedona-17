@@ -103,36 +103,29 @@
 .features__item {
   padding-left: 70px;
   position: relative;
-  &::before {
-    .pseudo-element;
-    left: 22px;
-    top: -5px;
-    width: 20px;
-    height: 20px;
-  }
-  &--housing::before {
-    background-image: url("../img/icon-house.svg");
-    width: 37px;
-    height: 36px;
-  /*  width: 74.695px;
-    height: 72.346px;*/
-  }
-  &--souvenirs::before {
-    background-image: url("../img/icon-gift.svg");
-    width: 32px;
-    height: 38px;
-  /*  width: 63px;
-    height: 75.084px;*/
-  }
-  &--food::before {
-    background-image: url("../img/icon-burger.svg");
-    width: 40px;
-    height: 35px;
-  /*  width: 76.166px;
-    height: 68.959px;*/
-  }
 }
-/*НЕ ПОНЯЛ, ПОЧЕМУ ОНИ НЕ ПОДГОНЯЮТСЯ ПОД РАЗМЕРЫ КОНТЕЙНЕРА*/
+
+.features__icon {
+  .pseudo-element;
+  left: 22px;
+  top: -5px;
+  fill: #81b3d2;
+}
+
+.features__item--housing .features__icon  {
+  width: 37px;
+  height: 36px;
+}
+
+.features__item--souvenirs .features__icon  {
+  width: 32px;
+  height: 38px;
+}
+
+.features__item--food .features__icon  {
+  width: 40px;
+  height: 35px;
+}
 
 .features__title {
   .contents;
@@ -271,17 +264,32 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  &::before {
-    left: 50%;
-    margin-left: -40px;
-    top: 20px;
-    width: 80px;
-    height: 80px;
-  }
 }
 
 .features__item--souvenirs {
   order: 1;
+}
+
+.features__icon {
+  .pseudo-element;
+  left: 50%;
+  margin-left: -40px;
+  top: 20px;
+}
+
+.features__item--housing .features__icon  {
+  width: 75px;
+  height: 72px;
+}
+
+.features__item--souvenirs .features__icon  {
+  width: 64px;
+  height: 75px;
+}
+
+.features__item--food .features__icon  {
+  width: 77px;
+  height: 68px;
 }
 
 .features__title {

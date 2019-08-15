@@ -13,7 +13,7 @@
 <body>
 
   <div style="display:none">
-    <include src="source/img/sprite-test.svg"></include>
+    <include src="source/img/sprite.svg"></include>
   </div>
 
   <div class="main-wrapper">
@@ -86,14 +86,23 @@
           <section class="features">
             <div class="features__item features__item--housing">
               <h4 class="features__title">Жилье</h4>
+              <svg class="features__icon">
+                <use xlink:href="#icon-house_spr"></use>
+              </svg>
               <p class="features__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
             <div class="features__item features__item--souvenirs">
               <h4 class="features__title">Сувениры</h4>
+              <svg class="features__icon">
+                <use xlink:href="#icon-gift_spr"></use>
+              </svg>
               <p class="features__description">Не только китайского, но и местного производства!</p>
             </div>
             <div class="features__item features__item--food">
               <h4 class="features__title">Еда</h4>
+              <svg class="features__icon">
+                <use xlink:href="#icon-burger_spr"></use>
+              </svg>
               <p class="features__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>
           </section>
@@ -184,6 +193,9 @@
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="user-list__login-icon" width="27" height="34">
+          <use xlink:href="#logo-htmlacademy_spr"></use>
+        </svg>
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </div>

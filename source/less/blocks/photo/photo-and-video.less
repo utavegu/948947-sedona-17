@@ -9,8 +9,13 @@
 
 .photo-and-video__description {
   .contents;
-  padding: 14px 25px;
+  padding: 14px 25px 8px;
   line-height: 24px;
+  margin-bottom: 0;
+}
+
+.photo {
+  margin-top: 0;
 }
 
 .photo__card {
@@ -49,26 +54,27 @@
   font-size: 14px;
   font-weight: bold;
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 21px;
-  padding-left: 36px;
-  position: relative;
-/*  &::before {
-    .pseudo-element;
-    background-image: url("../img/icon-like.svg");
-    width: 22px;
-    height: 20px;
-    left: 0;
-    top: -5px;
-    opacity: 0.3;
-    }*/
+  margin-top: 8px;
+  margin-bottom: 16px;
+  //Вот это опасный момент, учитывая, что дальше он мутирует в псевдоэлемент. Лучше было сразу запилить нижний паддинг от "автора".
+  padding-left: 0;
+}
+
+.photo__likes-icon {
+  width: 23px;
+  height: 21px;
+  opacity: 0.3;
+}
+
+.photo__likes-count {
+  padding-left: 10px;
 }
 
 
 
 .video {
   border-top: 1px solid #e5e5e5;
-  margin-top: 28px;
+  margin-top: 21px;
   position: relative;
   margin-bottom: 140px;
 }
@@ -104,18 +110,59 @@
   .pseudo-element;
   left: 50%;
   margin-left: -140px;
-  bottom: -62px;
+  bottom: -65px;
 }
 
-.video-controller__volume-box {
+.video-controller__timeline{
   height: 45px;
   background-color: #000000;
   opacity: 0.6;
+  position: relative;
+}
+
+.video-controller__timeline-scale {
+  .pseudo-element;
+  width: 9px;
+  height: 9px;
+  top: 19px;
+  left: 58px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-controller__timeline-slider {
+  .pseudo-element;
+  top: 21px;
+  left: 21px;
+  opacity: 0.2;
 }
 
 .video-controller__control-box {
   height: 65px;
   background-color: #f2f2f2;
+  position: relative;
+}
+
+.video-controller__replay {
+  .pseudo-element;
+  top: 21px;
+  left: 24px;
+  cursor: pointer;
+}
+
+.video-controller__subtitles {
+  .pseudo-element;
+  top: 22px;
+  right: 74px;
+  cursor: pointer;
+}
+
+.video-controller__fullscreen {
+  .pseudo-element;
+  top: 22px;
+  right: 23px;
+  cursor: pointer;
 }
 
 

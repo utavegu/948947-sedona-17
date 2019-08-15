@@ -14,7 +14,7 @@ var menuNavigation = document.querySelector(".site-list");
 window.onload = function() {
   if (document.body.clientWidth <= 320) {
     menuNavigation.classList.add("hidden");
-    menuToggleSection.classList.add("appear");
+    menuToggleButton.classList.add("appear");
   }
   else {
     menuNavigation.classList.remove("hidden");
@@ -22,24 +22,24 @@ window.onload = function() {
     menuClose.classList.remove("appear");
   }
 }
-
 menuToggleButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   menuNavigation.classList.remove("hidden");
-  menuToggleSection.classList.remove("appear");
   menuClose.classList.add("appear");
+  menuToggleButton.classList.remove("appear");
 });
 
-menuToggleButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  menuNavigation.classList.remove("hidden");
-  menuToggleSection.classList.remove("appear");
-  menuClose.classList.add("appear");
-});
-
+// menuToggleButton.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   menuNavigation.classList.remove("hidden");
+//   menuToggleSection.classList.remove("appear");
+//   menuClose.classList.add("appear");
+// });
+//
 menuClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   menuNavigation.classList.add("hidden");
   menuClose.classList.remove("appear");
   menuToggleSection.classList.add("appear");
+  menuToggleButton.classList.add("appear");
 });

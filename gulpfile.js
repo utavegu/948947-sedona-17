@@ -15,6 +15,7 @@ var webp = require("gulp-webp");  //подключил оптимизатор we
 var svgstore = require("gulp-svgstore");  //подключил сборщик svg-спрайта
 var posthtml = require("gulp-posthtml");  //подключил post-html
 var include = require("posthtml-include");  //и плагин инклюд для него
+//Это мне на будущее памятки, чтобы я и через несколько лет помнил, как тут что работает
 
 
 //Декодирование less в css и автопрефиксер
@@ -28,14 +29,14 @@ gulp.task("css-dev", function () {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());  //ВОТ ЭТО НЕ ПОНЯЛ, ЧТО ДАЕТ
+    .pipe(server.stream());
 });
 
 //Минимизация css и закидывание его в продакшн
 gulp.task("css-prod", function () {
   return gulp.src("source/css/style.css")
 	  .pipe(csso())
-    // .pipe(rename("style.min.css"))     ТАК СЕБЕ ИДЕЯ, ЧЕСТНО ГОВОРЯ
+    // .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
 });
 
@@ -66,12 +67,12 @@ gulp.task("webp", function() {
     .pipe(gulp.dest("build/img"));
 })
 
-//ТЕСТОВОЕ создание svg-спрайта
+//Создание svg-спрайта
 gulp.task("sprite", function() {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("source/img/*_spr.svg")
   .pipe(svgstore())
-  .pipe(rename("sprite-test.svg"))
-  .pipe(gulp.dest("source/img"))  //А В ОДНУ СТРОКУ МОЖНО?
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("source/img"))
   .pipe(gulp.dest("build/img"));
 })
 
@@ -86,6 +87,7 @@ gulp.task("copy", function() {
 		"source/fonts/**/*.{woff,woff2}",
 		//"source/img/**",
 		"source/js/**",
+		"source/css/normalize.css",
 		"source/*.ico"
 		], {
 			base: "source"
@@ -111,3 +113,6 @@ gulp.task("build", gulp.series("css-dev", "clean", "copy", "css-prod", "images",
 
 //Сборка проекта + запуск локального сервера
 gulp.task("start", gulp.series("build", "server"));
+
+//Тестирование в препродакшене (обязательно после npm run build!)
+gulp.task("prepro", gulp.series("css-dev", "copy", "css-prod", "html"));
