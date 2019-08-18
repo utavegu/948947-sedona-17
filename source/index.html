@@ -16,7 +16,7 @@
 <body>
 
   <div style="display:none">
-    <include src="source/img/sprite-test.svg"></include>
+    <include src="source/img/sprite.svg"></include>
   </div>
 
   <div class="main-wrapper">
@@ -27,6 +27,9 @@
       <ul class="main-navigation__list site-list">
         <li class="site-list__item site-list__item--current">
           <a class="site-list__link">Главная</a>
+          <button class="site-list__close" type="button">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="photo.html">Фото и видео</a>
@@ -45,7 +48,11 @@
           <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип: Седона" width="102" height="83">
         </picture>
       </a>
-      <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-navigation__toggle-section">
+        <button class="main-navigation__toggle-button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
     </nav>
     <div class="main-header__poster">
       <img class="main-header__poster-text" src="img/text-sedona-index.svg" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!" width="281" height="214">
@@ -82,14 +89,23 @@
           <section class="features">
             <div class="features__item features__item--housing">
               <h4 class="features__title">Жилье</h4>
+              <svg class="features__icon">
+                <use xlink:href="#icon-house_spr"></use>
+              </svg>
               <p class="features__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
             <div class="features__item features__item--souvenirs">
               <h4 class="features__title">Сувениры</h4>
-              <p class="features__description">Не только китайского, но и местного производства!</p>
+              <svg class="features__icon">
+                <use xlink:href="#icon-gift_spr"></use>
+              </svg>
+              <p class="features__description">Не только китайского,<br class="not-mobile"> но и местного производства!</p>
             </div>
             <div class="features__item features__item--food">
               <h4 class="features__title">Еда</h4>
+              <svg class="features__icon">
+                <use xlink:href="#icon-burger_spr"></use>
+              </svg>
               <p class="features__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>
           </section>
@@ -141,7 +157,7 @@
       <p class="hotel-search__description">
         Укажите предполагаемые даты поездки, <br class="not-mobile"> и мы покажем вам лучшие предложения гостиниц в Cедоне
       </p>
-      <a class="hotel-search__button button" href="#">Найти гостиницу</a>
+      <a class="hotel-search__button button" href="search-hotel.html">Найти гостиницу</a>
       <picture>
         <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
@@ -180,11 +196,17 @@
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="user-list__login-icon" width="27" height="34">
+          <use xlink:href="#logo-htmlacademy_spr"></use>
+        </svg>
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </div>
   </footer>
 </div>
+
+<script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,258 @@
+.video {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 21px;
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.video__call {
+  display: block;
+  .contents;
+  .heading;
+  margin-top: 37px;
+}
+
+.video__description {
+  .contents;
+  line-height: 24px;
+  padding: 15px 30px 20px;
+}
+
+.video__screen {
+  background-image: url("../img/video-mobile@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-mobile@2x.jpg");
+    }
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.video-controller {
+  width: 280px;
+  height: 110px;
+  .pseudo-element;
+  left: 50%;
+  margin-left: -140px;
+  bottom: -65px;
+}
+
+.video-controller__timeline {
+  height: 45px;
+  background-color: #000000;
+  opacity: 0.6;
+  position: relative;
+}
+
+.video-controller__timeline-scale {
+  .pseudo-element;
+  width: 9px;
+  height: 9px;
+  top: 19px;
+  left: 58px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-controller__timeline-slider {
+  .pseudo-element;
+  top: 21px;
+  left: 21px;
+  opacity: 0.2;
+  width: 235px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+.video-controller__control-box {
+  height: 65px;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.video-controller__replay {
+  .pseudo-element;
+  top: 21px;
+  left: 24px;
+  cursor: pointer;
+}
+
+.video-controller__subtitles {
+  .pseudo-element;
+  top: 22px;
+  right: 74px;
+  cursor: pointer;
+}
+
+.video-controller__fullscreen {
+  .pseudo-element;
+  top: 22px;
+  right: 23px;
+  cursor: pointer;
+}
+
+
+
+@media (min-width: @tablet-width) {
+
+.video {
+  border: none;
+  margin-top: 61px;
+  margin-bottom: 66px;
+}
+
+.video__call {
+  font-size: 30px;
+}
+
+.video__description {
+  line-height: 24px;
+  width: 415px;
+  margin: 27px auto 75px;
+  padding: 0;
+}
+
+.video__screen {
+  background-image: url("../img/video-tablet@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  width: 648px;
+  height: 499px;
+}
+
+.video-controller {
+  width: 648px;
+  height: 93px;
+  margin-left: -324px;
+  bottom: 0;
+}
+
+.video-controller__timeline {
+  .pseudo-element;
+  width: 430px;
+  z-index: 1;
+  left: 73px;
+  top: 24px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.video-controller__control-box {
+  height: 93px;
+  // background-color: #000000;
+  // opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.video-controller__timeline-scale {
+  .pseudo-element;
+  top: 19px;
+  left: 134px;
+  opacity: 1;
+}
+
+.video-controller__timeline-slider {
+  width: 390px;
+}
+
+.video-controller__replay {
+  .pseudo-element;
+  top: 33px;
+  left: 33px;
+  opacity: 1;
+}
+
+//Как это делать без айдишника - пока не придумал
+
+#icon-video-replay_spr path {
+  fill: #ffffff;
+}
+
+.video-controller__subtitles {
+  .pseudo-element;
+  top: 33px;
+  right: 90px;
+  opacity: 1;
+}
+
+#icon-video-subtitles_spr path {
+  fill: #ffffff;
+}
+
+.video-controller__fullscreen {
+  .pseudo-element;
+  top: 33px;
+  right: 40px;
+  opacity: 1;
+}
+
+#icon-video-fullscreen_spr polygon {
+  fill: #ffffff;
+}
+
+}
+
+
+
+@media (min-width: @desktop-width) {
+
+.video {
+  margin-top: 67px;
+  margin-bottom: 110px;
+}
+
+.video__description {
+  line-height: 24px;
+  width: 415px;
+  margin: 27px auto 71px;
+  padding: 0;
+}
+
+.video__screen {
+  background-image: url("../img/video-desktop@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  width: 800px;
+  height: 500px;
+}
+
+.video-controller {
+  .pseudo-element;
+  width: 800px;
+  height: 93px;
+  margin-left: -400px;
+}
+
+.video-controller__timeline {
+  .pseudo-element;
+  width: 580px;
+}
+
+.video-controller__timeline-slider {
+  width: 540px;
+}
+
+.video-controller__replay {
+  .pseudo-element;
+  top: 35px;
+  left: 35px;
+}
+
+.video-controller__subtitles {
+  .pseudo-element;
+  top: 36px;
+  right: 93px;
+}
+
+.video-controller__fullscreen {
+  .pseudo-element;
+  top: 36px;
+  right: 43px;
+}
+
+}
