@@ -35,7 +35,7 @@ gulp.task("css-dev", function () {
 //Минимизация css и закидывание его в продакшн
 gulp.task("css-prod", function () {
   return gulp.src("source/css/style.css")
-	  .pipe(csso())
+    .pipe(csso())
     // .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
 });
@@ -52,12 +52,12 @@ gulp.task("html", function() {
 //Оптимизация изображений (png, jpg, svg)
 gulp.task("images", function() {
 	return gulp.src("source/img/**/*.{png,jpg,svg}")
-		.pipe(imagemin([
-			imagemin.optipng({optimizationLevel:3}),
-			imagemin.jpegtran({progressive:true}),
-			imagemin.svgo()
-		]))
-		.pipe(gulp.dest("build/img"))
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel:3}),
+      imagemin.jpegtran({progressive:true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"))
 });
 
 //Создание webp из растра и копирование в продакшн
@@ -85,7 +85,7 @@ gulp.task("clean", function () {
 gulp.task("copy", function() {
 	return gulp.src([
 		"source/fonts/**/*.{woff,woff2}",
-		//"source/img/**",
+    //"source/img/**",
 		"source/js/**",
 		"source/css/normalize.css",
 		"source/*.ico"
