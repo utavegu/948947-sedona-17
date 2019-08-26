@@ -1,15 +1,15 @@
 .hotel-search {
-  position: relative;
+  // position: relative;
   margin-top: 30px;
-  &::before {
-    .pseudo-element;
-    background-image: url("../img/icon-map-marker.svg");
-    width: 30px;
-    height: 30px;
-    left: 50%-5px;
-    top: 50%+16.5px;
-    z-index: 1;
-  }
+  // &::before {
+  //   .pseudo-element;
+  //   background-image: url("../img/icon-map-marker.svg");
+  //   width: 30px;
+  //   height: 30px;
+  //   left: 50%-5px;
+  //   top: 50%+16.5px;
+  //   z-index: 1;
+  // }
 }
 
 .hotel-search__question {
@@ -31,12 +31,41 @@
 
 .hotel-search__button {
   margin-left: 20px;
+  margin-bottom: 47px;
+}
+
+.hotel-search__map,
+.hotel-search__map iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+.hotel-search__map iframe {
+  position: absolute;
 }
 
 .hotel-search__map {
-  margin-top: 47px;
-  margin-bottom: 13px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-mobile@2x.jpg");
+    }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f4f0ed;
+
+  margin-bottom: 37px;
+
   position: relative;
+
+  &::before {
+    .pseudo-element;
+    background-image: url("../img/icon-map-marker.svg");
+    width: 30px;
+    height: 30px;
+    left: 50%-5px;
+    top: 50%-5px;
+  }
 }
 
 
@@ -68,11 +97,20 @@
 .hotel-search__button {
   display: block;
   width: 458px;
-  margin: 0 auto 10px;
+  margin: 0 auto 57px;
 }
 
 .hotel-search__map {
   width: 768px;
+  background-image: url("../img/bg-map-tablet@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+  margin-bottom: 25px;
+  &::before {
+    left: 50%-2px;
+    top: 50%-4px;
+  }
 }
 
 
@@ -100,12 +138,19 @@
 }
 
 .hotel-search__button {
-  margin-bottom: 19px;
+  margin-bottom: 67px;
 }
 
 .hotel-search__map {
   width: 1200px;
-  height: 350px;
+  background-image: url("../img/bg-map-desktop@1x.jpg");
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+  &::before {
+      left: 50%-1px;
+      top: 50%-5px;
+  }
 }
 
 

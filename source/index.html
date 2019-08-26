@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
- <!--  ВОФФ-1 НЕ СТАЛ ГРУЗИТЬ ИЗ-ЗА ПОДДЕРЖКИ БРАУЗЕРОВ, ИЕ11 ВСЁ РАВНО ЭТОТ ТЕГ НЕ УВИДИТ, КАК И ШРИФТ ВОФФ-2 -->
 </head>
 
 <body>
@@ -26,7 +25,7 @@
     <nav class="main-navigation">
       <ul class="main-navigation__list site-list">
         <li class="site-list__item site-list__item--current">
-          <a class="site-list__link">Главная</a>
+          <a class="site-list__link site-list__link--active">Главная</a>
           <button class="site-list__close" type="button">
             <span class="visually-hidden">Закрыть меню</span>
           </button>
@@ -41,7 +40,7 @@
           <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
         </li>
       </ul>
-      <a class="main-header__logo-link" href="#">
+      <a class="main-header__logo-link">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -158,15 +157,22 @@
         Укажите предполагаемые даты поездки, <br class="not-mobile"> и мы покажем вам лучшие предложения гостиниц в Cедоне
       </p>
       <a class="hotel-search__button button" href="search-hotel.html">Найти гостиницу</a>
-      <picture>
+
+      <!-- СДЕЛАЙ ЭТО БЭКГРАУНДОМ К ХОТЕЛ-СЁРЧ__МАП, И ФОНОВЫЙ ЦВЕТ, СООТВЕТСТВЕННО -->
+      <!-- <picture>
         <source type="image/webp" media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
         <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-
         <source media="(min-width: 1280px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x" sizes="(min-width: 1280px) 1280w">
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x" sizes="(min-width: 768px) 768w">
         <img class="hotel-search__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта Аризоны" width="320" height="350">
-      </picture>
+      </picture> -->
+
+      <div class="hotel-search__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3353753.312179693!2d-111.839084!3d34.827328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNg!5e0!3m2!1sru!2sru!4v1481628150996" allowfullscreen>
+        </iframe>
+      </div>
+
     </section>
   </main>
 

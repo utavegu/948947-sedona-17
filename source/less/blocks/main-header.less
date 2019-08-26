@@ -25,6 +25,12 @@
     border-bottom: none;
     box-shadow: inset 0 -5px 6px -5px #333377;
   }
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
 .site-list__close {
@@ -48,6 +54,9 @@
   color: #ffffff;
   display: block;
   padding: 17px 0 17px;
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .site-list.hidden {
@@ -184,6 +193,12 @@
     box-shadow: none;
     margin: 0;
   }
+  &:hover {
+    background-color: #ffffff;
+  }
+  &:active {
+    background-color: #ffffff;
+  }
 }
 
 .site-list__item:nth-child(3) {
@@ -197,6 +212,21 @@
 .site-list__link {
   .contents;
   color: #000000;
+  &:hover {
+    color: #81b3d2;
+  }
+  &:active {
+    color: #cacaca;
+  }
+  &--active {
+    color: #766357;
+  }
+  &--active:hover {
+    color: #604e43;
+  }
+  &--active:active {
+    color: #dbd8d5;
+  }
 }
 
 .main-header__logo-link {
