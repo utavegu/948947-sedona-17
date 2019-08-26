@@ -24,6 +24,12 @@
   height: 48px;
   position: relative;
   margin-right: 6px;
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
 .social__item:last-child {
@@ -57,6 +63,9 @@
     left: 50%-19.979px;
     background-image: url("../img/icon-youtube.svg");
   }
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__copyright {
@@ -80,6 +89,16 @@
   display: inline-block;
   vertical-align: middle;
   fill: #000000;
+}
+
+.user-list__login-icon {
+  fill: #000000;
+  &:hover {
+    fill: #81b3d2;
+  }
+  &:active {
+    fill: #b2b2b2;
+  }
 }
 
 

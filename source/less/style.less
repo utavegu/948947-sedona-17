@@ -1,3 +1,5 @@
+/*
+
 @font-face {
   font-family: PT Sans;
   src: url("../fonts/web/ptsans.woff2");
@@ -12,6 +14,20 @@
   src: url("../fonts/web/ptsansbold.woff");
   font-weight: bold;
   font-style: normal;
+}
+
+*/
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: normal;
 }
 
 @import "variables.less";
@@ -93,6 +109,16 @@ img {
   font-weight: bold;
   font-family: "PT Sans", "Arial", sans-serif;
   cursor: pointer;
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 @import "blocks/main-header.less";

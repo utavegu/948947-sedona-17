@@ -3,14 +3,6 @@ var menuToggleButton = document.querySelector(".main-navigation__toggle-button")
 var menuClose = document.querySelector(".site-list__close");
 var menuNavigation = document.querySelector(".site-list");
 
-//В принципе на мобильном этот скрипт работает, но чтобы реагировал на вьюпорт - написал вариант, который под ним... который работает так же
-// window.onload = function() {
-//   if (screen.width <= 320) {
-//     menuNavigation.classList.add("hidden");
-//     menuToggleSection.classList.add("appear");
-//   }
-// }
-
 window.onload = function() {
   if (document.body.clientWidth <= 320) {
     menuNavigation.classList.add("hidden");
@@ -29,17 +21,41 @@ menuToggleButton.addEventListener("click", function (evt) {
   menuToggleButton.classList.remove("appear");
 });
 
-// menuToggleButton.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   menuNavigation.classList.remove("hidden");
-//   menuToggleSection.classList.remove("appear");
-//   menuClose.classList.add("appear");
-// });
-//
 menuClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   menuNavigation.classList.add("hidden");
   menuClose.classList.remove("appear");
   menuToggleSection.classList.add("appear");
   menuToggleButton.classList.add("appear");
+});
+
+
+
+var formSubmitButton = document.querySelector(".feedback__button");
+var popupSuccessWindow = document.querySelector(".popup--success");
+var popupFailureWindow = document.querySelector(".popup--failure");
+var popupSuccessButton = document.querySelector(".popup-success__button");
+var popupFailureButton = document.querySelector(".popup-failure__button");
+var fieldName = document.querySelector("#forename");
+var fieldSurname = document.querySelector("#surname");
+var fieldPhone = document.querySelector("#phone");
+var fieldEmail = document.querySelector("#e-mail");
+
+formSubmitButton.addEventListener("click", function (evt) {
+  if (!fieldName.value || !fieldSurname.value || !fieldPhone.value || !fieldEmail.value) {
+    popupFailureWindow.classList.add("is-opened");
+  } else {
+    evt.preventDefault();
+    popupSuccessWindow.classList.add("is-opened");
+  }
+});
+
+popupSuccessButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupSuccessWindow.classList.remove("is-opened");
+});
+
+popupFailureButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupFailureWindow.classList.remove("is-opened");
 });
