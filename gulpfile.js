@@ -15,7 +15,8 @@ var webp = require("gulp-webp");  //подключил оптимизатор we
 var svgstore = require("gulp-svgstore");  //подключил сборщик svg-спрайта
 var posthtml = require("gulp-posthtml");  //подключил post-html
 var include = require("posthtml-include");  //и плагин инклюд для него
-//Это мне на будущее памятки, чтобы я и через несколько лет помнил, как тут что работает
+var minjs = require("gulp-uglify");  //минификатор js
+var minhtml = require("gulp-minimize");  //минификатор html
 
 
 //Декодирование less в css и автопрефиксер
@@ -46,6 +47,7 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(minhtml())
     .pipe(gulp.dest("build"));
 })
 
@@ -81,13 +83,18 @@ gulp.task("clean", function () {
 	return del("build");
 });
 
+gulp.task("compress-js", function() {
+  return gulp.src("source/js/*.js")
+  .pipe(minjs())
+  .pipe(gulp.dest("build/js"));
+});
+
 //Копирование нужного в папку продакшена
 gulp.task("copy", function() {
 	return gulp.src([
 		"source/fonts/**/*.{woff,woff2}",
-    //"source/img/**",
-		"source/js/**",
-		"source/css/normalize.css",
+		//"source/img/**",
+		// "source/js/**",
 		"source/*.ico"
 		], {
 			base: "source"
@@ -109,7 +116,7 @@ gulp.task("server", function () {
 });
 
 //Сборка проекта
-gulp.task("build", gulp.series("css-dev", "clean", "copy", "css-prod", "images", "webp", "sprite", "html"));
+gulp.task("build", gulp.series("css-dev", "clean", "copy", "css-prod", "compress-js", "images", "webp", "sprite", "html"));
 
 //Сборка проекта + запуск локального сервера
 gulp.task("start", gulp.series("build", "server"));
