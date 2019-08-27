@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона - Форма отзыва</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -71,16 +71,22 @@
         <fieldset class="feedback__section about">
           <legend class="feedback__section-title">Представьтесь:</legend>
           <p class="feedback__item about__item">
-            <label class="feedback__field-signature about__label" for="forename">Имя*:</label>
+            <label class="feedback__field-signature about__label" for="forename">
+              Имя*:
+            </label>
             <input class="about__input" type="text" id="forename" name="forename" placeholder="Петр" required>
           </p>
           <p class="feedback__item about__item">
-            <label class="feedback__field-signature about__label" for="surname">Фамилия*:</label>
-              <input class="about__input" type="text" id="surname" name="surname" placeholder="Иванов" required>
+            <label class="feedback__field-signature about__label" for="surname">
+              Фамилия*:
+            </label>
+            <input class="about__input" type="text" id="surname" name="surname" placeholder="Иванов" required>
           </p>
           <p class="feedback__item about__item">
-            <label class="feedback__field-signature about__label" for="patronymic">Отчество</label>
-              <input class="about__input" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
+            <label class="feedback__field-signature about__label" for="patronymic">
+              Отчество:
+            </label>
+            <input class="about__input" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
           </p>
         </fieldset>
 
@@ -88,11 +94,15 @@
           <legend class="feedback__section-title">Контактная информация:</legend>
           <div class="contacts__wrapper">
             <p class="feedback__item contacts__item">
-              <label class="feedback__field-signature contacts__label contacts__label--phone" for="phone"><span class="contacts--not-desctop">Контактный</span> телефон*:</label>
+              <label class="feedback__field-signature contacts__label contacts__label--phone" for="phone">
+                <span class="contacts--not-desctop">Контактный</span> телефон*:
+              </label>
               <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
             </p>
             <p class="feedback__item contacts__item">
-              <label class="feedback__field-signature contacts__label contacts__label--mail" for="e-mail">Электронная почта*:</label>
+              <label class="feedback__field-signature contacts__label contacts__label--mail" for="e-mail">
+                Электронная почта*:
+              </label>
               <input class="contacts__input" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
             </p>
           </div>
