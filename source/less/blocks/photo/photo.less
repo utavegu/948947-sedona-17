@@ -9,7 +9,7 @@
 
 .photo-and-video__description {
   .contents;
-  padding: 14px 25px 8px;
+  padding: 14px 24px 8px;
   line-height: 24px;
   margin-bottom: 0;
 }
@@ -69,8 +69,6 @@
   padding-left: 10px;
 }
 
-
-
 @media (min-width: @tablet-width) {
 
 .photo-and-video {
@@ -89,14 +87,11 @@
   line-height: 24px;
 }
 
-
 .photo__section-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-
   margin: 0 auto;
-
   width: 648px;
 }
 
@@ -119,7 +114,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
@@ -142,14 +136,12 @@
 
 .photo__name {
   padding-left: 20px;
-
 }
 
 .photo__author {
   padding-left: 20px;
   padding-bottom: 18px;
 }
-
 
 .photo__card--vast .photo__likes {
   position: absolute;
@@ -164,8 +156,6 @@
 }
 
 }
-
-
 
 @media (min-width: @desktop-width) {
 
@@ -189,11 +179,9 @@
   width: 100%;
   margin: 0;
   padding: 0;
-
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-
   &::after {
     .pseudo-element;
     box-shadow: 0 -80px 0 0 rgba(0, 0, 0, 0.3) inset;
@@ -218,10 +206,6 @@
   width: 1200px;
   height: 400px;
 }
-
-/*ВОТ НА УРОВНЕ ДЕСКТОПА ПРИХОДИТ ОСОЗНАНИЕ, ЧТО ЕСЛИ КОРРЕКТНО (всмысле с точки зрения семантики) СДЕЛАТЬ БЕЗ ФИГУР-ФИГКЭПШЕН, ТО Я БЫ ЛУЧШЕ ПОДПИСЬ К ФОТО СО ВСЕМИ ПРОЧИМИ МЕТАДАННЫМИ СОБРАЛ В ОТДЕЛЬНЫЙ БЛОК И ПОЗИЦИОНИРОВАЛ ЕГО НА ФОТОКАРТОЧКЕ. НО ПОКА ТАК СДЕЛАЮ
-Хотя, вроде и так норм получилось...
-*/
 
 .photo__name {
   position: absolute;

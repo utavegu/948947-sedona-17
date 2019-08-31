@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона - Форма отзыва</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   <script src="js/picturefill.min.js" async></script>
 </head>
-
 <body>
-
   <div style="display:none">
     <include src="source/img/sprite.svg"></include>
   </div>
-
   <div class="main-wrapper">
   <header class="main-header">
     <h1 class="visually-hidden">Поиск гостиниц в городке Седона, штат Аризона</h1>
@@ -54,10 +49,11 @@
       </div>
     </nav>
     <div class="main-header__poster-miny">
-      <img class="main-header__poster-text-miny" src="img/text-sedona.svg" alt="Sedona" width="230" height="40">
+      <svg class="main-header__poster-text-miny">
+        <use xlink:href="#text-sedona_spr"></use>
+      </svg>
     </div>
   </header>
-
   <main class="feedback-page">
     <section class="feedback">
       <header class="feedback__header">
@@ -67,7 +63,6 @@
         </p>
       </header>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-
         <fieldset class="feedback__section about">
           <legend class="feedback__section-title">Представьтесь:</legend>
           <p class="feedback__item about__item">
@@ -89,25 +84,23 @@
             <input class="about__input" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
           </p>
         </fieldset>
-
         <fieldset class="feedback__section contacts">
           <legend class="feedback__section-title">Контактная информация:</legend>
           <div class="contacts__wrapper">
-            <p class="feedback__item contacts__item">
-              <label class="feedback__field-signature contacts__label contacts__label--phone" for="phone">
+            <p class="feedback__item contacts__item contacts__item--phone">
+              <label class="feedback__field-signature contacts__label" for="phone">
                 <span class="contacts--not-desctop">Контактный</span> телефон*:
               </label>
               <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
             </p>
-            <p class="feedback__item contacts__item">
-              <label class="feedback__field-signature contacts__label contacts__label--mail" for="e-mail">
+            <p class="feedback__item contacts__item contacts__item--mail">
+              <label class="feedback__field-signature contacts__label" for="e-mail">
                 Электронная почта*:
               </label>
               <input class="contacts__input" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
             </p>
           </div>
         </fieldset>
-
         <fieldset class="feedback__section impression">
           <legend class="feedback__section-title">Ваше общее впечатление:</legend>
           <p class="feedback__item impression__item">
@@ -132,7 +125,6 @@
             </label>
           </p>
         </fieldset>
-
         <fieldset class="feedback__section sights">
           <legend class="feedback__section-title">Посещенные достопримечательности:</legend>
           <div class="sights__wrapper">
@@ -166,12 +158,10 @@
             </p>
           </div>
         </fieldset>
-
         <fieldset class="feedback__section emotion">
           <legend class="feedback__section-title">Опишите свои эмоции:</legend>
           <textarea class="emotion__textarea" name="emotion" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-
         <div class="feedback__footer">
           <button class="feedback__button button" type="submit">Отправить отзыв</button>
           <span class="feedback__proviso">* - обязательные поля</span>
@@ -179,7 +169,6 @@
       </form>
     </section>
   </main>
-
   <footer class="main-footer">
   <p class="hashtag">
   #visitSEDONA
@@ -207,9 +196,7 @@
     </a>
   </div>
 </footer>
-
 </div>
-
 <div class="popup popup--failure">
   <div class="popup-failure">
     <b class="popup-failure__alert">Что-то пошло не так!</b>
@@ -217,7 +204,6 @@
     <button class="popup-failure__button button" type="button">Ок</button>
   </div>
 </div>
-
 <div class="popup popup--success">
   <div class="popup-success">
     <b class="popup-success__alert">Ваш отзыв отправлен!</b>
@@ -225,7 +211,5 @@
     <button class="popup-success__button button" type="button">Закрыть окно</button>
   </div>
 </div>
-
 <script src="js/script.js"></script>
-
 </body>
