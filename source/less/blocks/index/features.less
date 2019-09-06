@@ -1,0 +1,137 @@
+.features {
+  background-color: #ffffff;
+  padding-top: 35px;
+}
+
+.features__item {
+  padding-left: 70px;
+  position: relative;
+}
+
+.features__icon {
+  .pseudo-element;
+  left: 22px;
+  top: -5px;
+  fill: #81b3d2;
+}
+
+.features__item--housing .features__icon {
+  width: 37px;
+  height: 36px;
+}
+
+.features__item--souvenirs .features__icon {
+  width: 32px;
+  height: 38px;
+}
+
+.features__item--food .features__icon {
+  width: 40px;
+  height: 35px;
+}
+
+.features__title {
+  .contents;
+  .heading;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  line-height: 26px;
+}
+
+.features__description {
+  .contents;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 210px;
+  line-height: 21px;
+  padding-bottom: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .features__item {
+    width: 256px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .features__item--souvenirs {
+    order: 1;
+  }
+
+  .features__icon {
+    .pseudo-element;
+    left: 50%;
+    margin-left: -40px;
+    top: 20px;
+  }
+
+  .features__item--housing .features__icon {
+    width: 75px;
+    height: 72px;
+  }
+
+  .features__item--souvenirs .features__icon {
+    width: 64px;
+    height: 75px;
+  }
+
+  .features__item--food .features__icon {
+    width: 77px;
+    height: 68px;
+  }
+
+  .features__title {
+    margin: 0;
+    padding: 0;
+    margin-top: 125px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .features__description {
+    margin: 0 auto;
+    padding: 0;
+    width: 158px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .features__item--souvenirs .features__description {
+    width: 168px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    width: 100%;
+  }
+
+  .features__item {
+    width: 400px;
+    padding-bottom: 20px;
+  }
+
+  .features__item--housing .features__description {
+    width: 254px;
+  }
+
+  .features__item--souvenirs .features__description {
+    width: 220px;
+  }
+
+  .features__item--food .features__description {
+    width: 285px;
+  }
+}

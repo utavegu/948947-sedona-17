@@ -1,0 +1,133 @@
+.about {
+  margin-bottom: 28.5px;
+}
+
+.about .feedback__section-title {
+  margin-bottom: 24px;
+
+  &::before {
+    left: -91px;
+  }
+}
+
+.about__item {
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.about__label {
+  padding-left: 20px;
+  margin-right: 12px;
+}
+
+.about__input {
+  padding-left: 10px;
+  height: 58px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+
+  &[name="forename"] {
+    width: 230px;
+    padding-left: 20px;
+  }
+
+  &[name="surname"] {
+    width: 192px;
+    padding-left: 20px;
+  }
+
+  &[name="patronymic"] {
+    width: 194px;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    width: 379px;
+  }
+
+  .about .feedback__section-title {
+    margin-bottom: 52px;
+    text-align: left;
+    margin-left: 55px;
+
+    &::before {
+      .pseudo-element;
+      width: 1px;
+      height: 293px;
+      background-color: #e5e5e5;
+      top: 3px;
+      left: -55px;
+    }
+  }
+
+  .about__item {
+    margin-bottom: 22px;
+  }
+
+  .about__label {
+    margin-left: 37px;
+  }
+
+  .about__input {
+    margin-right: 45px;
+
+    &[name="forename"] {
+      width: 216px;
+    }
+
+    &[name="surname"] {
+      width: 178px;
+    }
+
+    &[name="patronymic"] {
+      width: 178px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    width: 480px;
+  }
+
+  .about .feedback__section-title {
+    margin-left: 80px;
+
+    &::before {
+      left: -80px;
+    }
+  }
+
+  .about__item {
+    .flex-container;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about__label {
+    margin: 0;
+    padding: 0;
+    padding-left: 75px;
+    padding-top: 10px;
+  }
+
+  .about__input {
+    margin: 0;
+    padding: 0;
+
+    &[name="forename"] {
+      width: 350px;
+    }
+
+    &[name="surname"] {
+      width: 312px;
+    }
+
+    &[name="patronymic"] {
+      width: 314px;
+    }
+  }
+}

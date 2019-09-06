@@ -116,11 +116,15 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
+gulp.task("untrack", function () {
+  return del("source/img/sprite.svg");
+});
+
 //Сборка проекта
-gulp.task("build", gulp.series("css-dev", "clean", "copy", "css-prod", "compress-js", "images", "webp", "sprite", "html"));
+gulp.task("build", gulp.series("css-dev", "clean", "copy", "css-prod", "compress-js", "images", "webp", "sprite", "html", "untrack"));
 
 //Сборка проекта + запуск локального сервера
 gulp.task("start", gulp.series("build", "server"));
 
-//Тестирование в препродакшене (обязательно после npm run build!)
+//Тестирование в препродакшене (обязательно после npm run build и без untrack в билде)
 gulp.task("prepro", gulp.series("css-dev", "copy", "css-prod", "html"));

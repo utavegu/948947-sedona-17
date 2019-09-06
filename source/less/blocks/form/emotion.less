@@ -1,0 +1,100 @@
+.emotion {
+  margin-bottom: 50px;
+}
+
+.emotion .feedback__section-title::before {
+  left: -53px;
+}
+
+.emotion__textarea {
+  width: 279px;
+  height: 160px;
+  margin-left: 17px;
+  margin-top: 21px;
+  padding-left: 22px;
+  padding-top: 17px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #f2f2f2;
+  line-height: 1.44em;
+  resize: none;
+  color: #000000;
+}
+
+.emotion textarea:-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-moz-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-ms-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+.emotion textarea::placeholder {
+  opacity: 1;
+  color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .emotion {
+    margin-bottom: 58.5px;
+  }
+
+  .emotion .feedback__section-title {
+    margin: 0 auto;
+    margin-bottom: 58px;
+
+    &::before {
+      left: -117px;
+    }
+  }
+
+  .emotion__textarea {
+    width: 648px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .emotion {
+    width: 960px;
+  }
+
+  .emotion .feedback__section-title {
+    &::before {
+      left: -275px;
+    }
+  }
+
+  .emotion__textarea {
+    width: 960px;
+  }
+}

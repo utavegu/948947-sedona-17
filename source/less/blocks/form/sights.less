@@ -1,0 +1,141 @@
+.sights {
+  margin-bottom: 5px;
+}
+
+.sights .feedback__section-title {
+  line-height: 1.44em;
+  margin-bottom: 35px;
+}
+
+.sights__item {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 62px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.sights__input:checked + .sights__checkbox {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sights__input:focus + .sights__checkbox {
+  outline: 1px solid blue;
+}
+
+.sights__checkbox {
+  position: absolute;
+  left: 5px;
+  top: -15px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: rgba(130, 130, 130, 1);
+  }
+}
+
+.sights__name {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 85px;
+  line-height: 18px;
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .sights {
+    margin-bottom: 19px;
+  }
+
+  .sights .feedback__section-title {
+    width: 278px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+
+    &::before {
+      .pseudo-element;
+      top: 30px;
+      left: -117px;
+    }
+
+    &::after {
+      .pseudo-element;
+      top: 30px;
+      left: 400px;
+    }
+  }
+
+  .sights__wrapper {
+    .flex-container;
+    width: 465px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .sights__item {
+    margin-bottom: 70px;
+    margin-left: 0;
+    width: 210px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sights {
+    margin-bottom: 18.5px;
+    width: 960px;
+  }
+
+  .sights .feedback__section-title {
+    margin-bottom: 52px;
+
+    &::before {
+      .pseudo-element;
+      top: 30px;
+      left: -282px;
+    }
+
+    &::after {
+      .pseudo-element;
+      top: 30px;
+      left: 400px;
+    }
+  }
+
+  .sights__wrapper {
+    width: 960px;
+    justify-content: space-between;
+  }
+
+  .sights__item {
+    text-align: left;
+    width: 205px;
+  }
+
+  .sights__item:nth-of-type(2) {
+    margin-left: 20px;
+  }
+
+  .sights__item:nth-of-type(3) {
+    margin-left: 15px;
+  }
+
+  .sights__checkbox {
+    top: -18px;
+    left: 0;
+  }
+
+  .sights__name {
+    padding-left: 80px;
+  }
+}

@@ -1,0 +1,40 @@
+.main-navigation {
+  position: relative;
+}
+
+.main-navigation__toggle-section.appear,
+.main-navigation__toggle-button.appear {
+  display: block;
+}
+
+.main-navigation__toggle-section {
+  min-height: 56px;
+  position: relative;
+}
+
+.main-navigation__toggle-button {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  cursor: pointer;
+  width: 22.928px;
+  height: 22.928px;
+  background-color: white;
+  border: none;
+  display: none;
+
+  &::before {
+    .pseudo-element;
+    left: 0;
+    top: 0;
+    width: 22.928px;
+    height: 22.928px;
+    background-image: url("../img/icon-menu.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__toggle-section {
+    display: none;
+  }
+}

@@ -49,7 +49,7 @@
       </div>
     </nav>
     <div class="main-header__poster-miny">
-      <svg class="main-header__poster-text-miny">
+      <svg class="main-header__poster-text-miny" width="230" height="39">
         <use xlink:href="#text-sedona_spr"></use>
       </svg>
     </div>
@@ -85,11 +85,11 @@
           </p>
         </fieldset>
         <fieldset class="feedback__section contacts">
-          <legend class="feedback__section-title">Контактная информация:</legend>
+          <legend class="feedback__section-title feedback__section-title--fat">Контактная информация:</legend>
           <div class="contacts__wrapper">
             <p class="feedback__item contacts__item contacts__item--phone">
               <label class="feedback__field-signature contacts__label" for="phone">
-                <span class="contacts--not-desctop">Контактный</span> телефон*:
+                <span class="not-desktop">Контактный</span> телефон*:
               </label>
               <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
             </p>
@@ -126,7 +126,7 @@
           </p>
         </fieldset>
         <fieldset class="feedback__section sights">
-          <legend class="feedback__section-title">Посещенные достопримечательности:</legend>
+          <legend class="feedback__section-title feedback__section-title--fat">Посещенные достопримечательности:</legend>
           <div class="sights__wrapper">
             <p class="feedback__item sights__item">
               <label>
@@ -159,7 +159,7 @@
           </div>
         </fieldset>
         <fieldset class="feedback__section emotion">
-          <legend class="feedback__section-title">Опишите свои эмоции:</legend>
+          <legend class="feedback__section-title feedback__section-title--fat">Опишите свои эмоции:</legend>
           <textarea class="emotion__textarea" name="emotion" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <div class="feedback__footer">
@@ -170,26 +170,32 @@
     </section>
   </main>
   <footer class="main-footer">
-  <p class="hashtag">
+  <p class="main-footer__hashtag">
   #visitSEDONA
   </p>
   <div class="social main-footer__social">
     <ul class="social__list">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href=""><span class="visually-hidden">Твиттер</span></a>
+      <li class="social__item" title="Твиттер">
+        <a class="social__link social__link--twitter" href="">
+          <span class="visually-hidden">Твиттер</span>
+        </a>
       </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href=""><span class="visually-hidden">Фэйсбук</span></a>
+      <li class="social__item" title="Фэйсбук">
+        <a class="social__link social__link--facebook" href="">
+          <span class="visually-hidden">Фэйсбук</span>
+        </a>
       </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href=""><span class="visually-hidden">Ютуб</span></a>
+      <li class="social__item" title="Ютуб">
+        <a class="social__link social__link--youtube" href="">
+          <span class="visually-hidden">Ютуб</span>
+        </a>
       </li>
     </ul>
   </div>
   <div class="main-footer__copyright copyright">
     <b class="copyright__text">Разработано</b>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-      <svg class="user-list__login-icon" width="27" height="34">
+      <svg class="copyright__logo" width="27" height="34">
         <use xlink:href="#logo-htmlacademy_spr"></use>
       </svg>
       <span class="visually-hidden">HTML Academy</span>

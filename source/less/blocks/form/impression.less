@@ -1,0 +1,94 @@
+.impression {
+  margin-bottom: 15.5px;
+}
+
+.impression .feedback__section-title {
+  margin-bottom: 42px;
+
+  &::before {
+    left: -43px;
+  }
+}
+
+.impression__item {
+  position: relative;
+  padding-bottom: 49px;
+  margin-left: 17px;
+}
+
+.impression__input:checked + .impression__radio {
+  background-image: url("../img/icon-point.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.impression__input:focus + .impression__radio {
+  outline: 1px solid blue;
+}
+
+.impression__radio {
+  position: absolute;
+  left: 6px;
+  top: -12px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: rgba(130, 130, 130, 1);
+  }
+}
+
+.impression__name {
+  padding-left: 86px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: @tablet-width) {
+  .impression {
+    width: 381px;
+    order: -1;
+  }
+
+  .impression .feedback__section-title {
+    margin-bottom: 75px;
+  }
+
+  .impression__item {
+    padding-bottom: 57px;
+    padding-left: 32px;
+  }
+
+  .impression__radio {
+    left: 45px;
+    top: -15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .impression {
+    width: 480px;
+  }
+
+  .impression .feedback__section-title {
+    text-align: left;
+    margin-left: 77px;
+  }
+
+  .impression__item {
+    padding-left: 0;
+    margin-left: -3px;
+  }
+
+  .impression__radio {
+    left: 6px;
+  }
+}
