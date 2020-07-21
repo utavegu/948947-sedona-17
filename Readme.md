@@ -11,4 +11,4 @@
 
 ---
 
-![](./source/img/sedona_400x400.png) ![](./source/img/sedona_400x400.png)
+![](./source/img/sedona_400x400.png) ![](./source/img/sedona2_400x400.png)
